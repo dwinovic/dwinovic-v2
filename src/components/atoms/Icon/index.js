@@ -54,9 +54,9 @@ const Icon = (props) => {
           src={`/icon/${typeIcon}`}
           height={size ? `${size}` : 30}
           width={size ? `${size}` : 30}
-          className={`${hover ? 'hover:bg-gray-400' : null} ${
+          className={`${hover ? 'hover:bg-white' : null} ${
             circle ? 'rounded-full' : null
-          }  scale-100`}
+          }  scale-100 `}
         />
       </a>
     </div>

@@ -20,14 +20,14 @@ const index = () => {
       </div>
       <Divider />
       <div className="mt-4 space-y-1 mb-4">
-        <NavButton icon="home" title="Home" />
+        <NavButton icon="home" title="Home" link="/" />
         <NavButton icon="star" title="Portfolio" />
         <NavButton icon="resume" title="Resume" />
         <NavButton icon="bookmarks" title="Bookmarks" />
         <NavButton icon="contact" title="Contact" />
       </div>
       <Button title="Hire Me" icon="send" />
-      <Divider />
+      <Divider addClass="my-4" />
     </div>
   );
 };

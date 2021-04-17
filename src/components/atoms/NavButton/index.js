@@ -7,7 +7,9 @@ const NavButton = (props) => {
   return (
     <a className="flex flex-row items-center space-x-1 " href={link}>
       <Icon icon={icon} className="" />
-      <h3 className="font-poppins font-medium text-base">{title}</h3>
+      <h3 className="font-poppins font-medium text-base hover:text-white">
+        {title}
+      </h3>
     </a>
   );
 };
