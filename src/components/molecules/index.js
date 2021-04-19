@@ -1,3 +1,5 @@
 import Navbar from './Navbar';
+import SectionHero from './SectionHero';
+import SkillSection from './SkillSection';
 
-export { Navbar };
+export { Navbar, SectionHero, SkillSection };
