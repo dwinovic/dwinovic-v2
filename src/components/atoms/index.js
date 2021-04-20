@@ -5,5 +5,19 @@ import Button from './Button';
 import Heading from './Heading';
 import Paragraph from './Paragraph';
 import HeadingSection from './HeadingSection';
+import Section from './Section';
+import CardProject from './CardProject';
+import CardPost from './CardPost';
 
-export { Icon, Divider, NavButton, Button, Heading, Paragraph, HeadingSection };
+export {
+  Icon,
+  Divider,
+  NavButton,
+  Button,
+  Heading,
+  Paragraph,
+  HeadingSection,
+  Section,
+  CardProject,
+  CardPost,
+};

@@ -4,7 +4,7 @@ import { Button, Divider, Icon, NavButton } from '../../atoms';
 
 const index = () => {
   return (
-    <div className="py-8 px-4 bg-white rounded-xl border-2 border-black-100 shadow-sm">
+    <div className="py-8 px-4 bg-white rounded-xl border-2 border-black-100 shadow-sm sticky top-8">
       <h1 className="text-2xl font-bold font-poppins text-black-500 text-center mb-4">
         Dwinovic
       </h1>
@@ -12,10 +12,10 @@ const index = () => {
         I'm a software engineer specialised in web and mobile development for.
       </p>
       <div className="flex justify-center space-x-4 mb-4">
-        <Icon icon="instagram" />
-        <Icon icon="instagram" />
-        <Icon icon="instagram" />
-        <Icon icon="instagram" />
+        <Icon icon="linkedin" hover circle />
+        <Icon icon="twitter" hover circle />
+        <Icon icon="medium" hover circle />
+        <Icon icon="instagram" hover circle />
       </div>
       <Divider />
       <ul className="flex flex-col mt-4 mb-6 space-y-2 items-center">
@@ -40,7 +40,7 @@ const index = () => {
         </li>
       </ul>
       <div className="flex justify-center">
-        <Button title="Hire Me" />
+        <Button title="Hire Me" btnIcon icon="send" />
       </div>
     </div>
   );

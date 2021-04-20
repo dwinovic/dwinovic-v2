@@ -2,8 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 
-const Icon = (props) => {
-  const { icon, link, hover, circle, size } = props;
+const Icon = ({ icon, link, hover, circle, size }) => {
   const [typeIcon, settypeIcon] = useState('');
 
   useEffect(() => {
@@ -41,6 +40,9 @@ const Icon = (props) => {
     if (icon === 'send') {
       settypeIcon('ic-send.svg');
     }
+    if (icon === 'check') {
+      settypeIcon('ic-check.svg');
+    }
   };
 
   return (
@@ -51,10 +53,10 @@ const Icon = (props) => {
         className="flex items-center justify-center"
       >
         <Image
-          src={`/icon/${typeIcon}`}
+          src={`/icons/${typeIcon}`}
           height={size ? `${size}` : 30}
           width={size ? `${size}` : 30}
-          className={`${hover ? 'hover:bg-white' : null} ${
+          className={`${hover ? 'hover:bg-black-300' : null} ${
             circle ? 'rounded-full' : null
           }  scale-100 `}
         />

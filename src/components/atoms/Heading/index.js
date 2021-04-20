@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Heading = ({ as, text, addClass }) => {
-  const headClass = `font-poppins font-bold text-black-500  ${addClass}`;
+const Heading = ({ as, text, addClass, color }) => {
+  const headClass = `font-poppins font-bold ${
+    color ? `${color}` : 'text-black-500'
+  }  ${addClass}`;
 
   const Head1 = () => {
     return <h1 className={`${headClass} text-5xl my-2`}>{text}</h1>;
