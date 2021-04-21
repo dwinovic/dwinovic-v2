@@ -6,6 +6,7 @@ import ProjectSection from './ProjectSection';
 import Projects from './Projects';
 import BookmarkSection from './BookmarkSection';
 import Footer from './Footer';
+import HeaderSection from './HeaderSection';
 
 export {
   Navbar,
@@ -16,4 +17,5 @@ export {
   Projects,
   BookmarkSection,
   Footer,
+  HeaderSection,
 };

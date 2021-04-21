@@ -8,6 +8,7 @@ import HeadingSection from './HeadingSection';
 import Section from './Section';
 import CardProject from './CardProject';
 import CardPost from './CardPost';
+import TagFilter from './TagFilter';
 
 export {
   Icon,
@@ -20,4 +21,5 @@ export {
   Section,
   CardProject,
   CardPost,
+  TagFilter,
 };

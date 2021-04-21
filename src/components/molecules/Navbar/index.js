@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { Button, Divider, Icon, NavButton } from '../../atoms';
+import Link from 'next/link';
 
 const index = () => {
   return (
@@ -20,12 +21,16 @@ const index = () => {
       <Divider />
       <ul className="flex flex-col mt-4 mb-6 space-y-2 items-center">
         <li>
-          <a className="text-poppins text-base hover:text-black-300">Home</a>
+          <Link href="/">
+            <a className="text-poppins text-base hover:text-black-300">Home</a>
+          </Link>
         </li>
         <li>
-          <a className="text-poppins text-base hover:text-black-300">
-            Portfolio
-          </a>
+          <Link href="/portfolios">
+            <a className="text-poppins text-base hover:text-black-300">
+              Portfolio
+            </a>
+          </Link>
         </li>
         <li>
           <a className="text-poppins text-base  hover:text-black-300">Resume</a>

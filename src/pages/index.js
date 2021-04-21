@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import {
   BookmarkSection,
+  CardProject,
   Footer,
   Navbar,
   ProjectSection,
@@ -23,7 +24,14 @@ export default function Home() {
           <div className="w-full px-8">
             <SectionHero />
             <SkillSection />
-            <ProjectSection />
+            <ProjectSection>
+              <div className="grid grid-cols-2 gap-4 mt-6">
+                <CardProject />
+                <CardProject />
+                <CardProject />
+                <CardProject />
+              </div>
+            </ProjectSection>
             <BookmarkSection />
             <Footer />
           </div>

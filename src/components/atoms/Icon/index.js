@@ -10,38 +10,33 @@ const Icon = ({ icon, link, hover, circle, size }) => {
   }, []);
 
   const iconCheck = () => {
-    if (icon === 'linkedin') {
-      settypeIcon('ic-linkedin.svg');
-    }
-    if (icon === 'twitter') {
-      settypeIcon('ic-twitter.svg');
-    }
-    if (icon === 'medium') {
-      settypeIcon('ic-medium.svg');
-    }
-    if (icon === 'instagram') {
-      settypeIcon('ic-instagram.svg');
-    }
-    if (icon === 'home') {
-      settypeIcon('ic-home.svg');
-    }
-    if (icon === 'star') {
-      settypeIcon('ic-star.png');
-    }
-    if (icon === 'resume') {
-      settypeIcon('ic-resume.svg');
-    }
-    if (icon === 'bookmarks') {
-      settypeIcon('ic-bookmarks.svg');
-    }
-    if (icon === 'contact') {
-      settypeIcon('ic-contact.svg');
-    }
-    if (icon === 'send') {
-      settypeIcon('ic-send.svg');
-    }
-    if (icon === 'check') {
-      settypeIcon('ic-check.svg');
+    switch (icon) {
+      case 'linkedin':
+        return settypeIcon('ic-linkedin.svg');
+      case 'twitter':
+        return settypeIcon('ic-twitter.svg');
+      case 'medium':
+        return settypeIcon('ic-medium.svg');
+      case 'instagram':
+        return settypeIcon('ic-instagram.svg');
+      case 'home':
+        return settypeIcon('ic-home.svg');
+      case 'star':
+        return settypeIcon('ic-star.svg');
+      case 'resume':
+        return settypeIcon('ic-resume.svg');
+      case 'bookmarks':
+        return settypeIcon('ic-bookmarks.svg');
+      case 'contact':
+        return settypeIcon('ic-contact.svg');
+      case 'send':
+        return settypeIcon('ic-send.svg');
+      case 'check':
+        return settypeIcon('ic-check.svg');
+      case 'send-dark':
+        return settypeIcon('ic-send-dark.svg');
+      default:
+        return settypeIcon('ic-linkedin.svg');
     }
   };
 
