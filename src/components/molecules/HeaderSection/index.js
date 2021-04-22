@@ -3,7 +3,7 @@ import { Button, Heading, Paragraph } from '../../atoms';
 
 const HeaderSection = ({ btnTitle, heading, desc }) => {
   return (
-    <div className="bg-gray-500">
+    <div className="bg-gray-500 h-72">
       <div className="box-border p-10  flex flex-col items-center justify-center container mx-auto">
         <Heading text={heading} as={1} color="text-white" />
         <Paragraph

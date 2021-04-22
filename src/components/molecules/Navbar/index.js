@@ -33,7 +33,11 @@ const index = () => {
           </Link>
         </li>
         <li>
-          <a className="text-poppins text-base  hover:text-black-300">Resume</a>
+          <Link href="">
+            <a className="text-poppins text-base  hover:text-black-300">
+              Resume
+            </a>
+          </Link>
         </li>
         <li>
           <a className="text-poppins text-base hover:text-black-300">

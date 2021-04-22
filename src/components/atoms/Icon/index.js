@@ -35,6 +35,10 @@ const Icon = ({ icon, link, hover, circle, size }) => {
         return settypeIcon('ic-check.svg');
       case 'send-dark':
         return settypeIcon('ic-send-dark.svg');
+      case 'back':
+        return settypeIcon('ic-back.svg');
+      case 'link':
+        return settypeIcon('ic-link.svg');
       default:
         return settypeIcon('ic-linkedin.svg');
     }

@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import {
   CardProject,
+  CardProjectPortfolio,
   Footer,
   HeaderSection,
   Heading,
@@ -15,7 +16,7 @@ const PortfolioPage = () => {
   return (
     <>
       <Head>
-        <title>Dwinovic | Software Engineer</title>
+        <title>Dwinovic | Portfolios </title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <body>
@@ -36,10 +37,10 @@ const PortfolioPage = () => {
               <TagFilter tagText="React JS" />
             </div>
             <ProjectSection headingOff>
-              <div className="flex flex-col space-y-8">
-                <CardProject />
-                <CardProject />
-                <CardProject />
+              <div className="flex flex-col space-y-8 items-center">
+                <CardProjectPortfolio />
+                <CardProjectPortfolio />
+                <CardProjectPortfolio />
               </div>
             </ProjectSection>
             <Footer />

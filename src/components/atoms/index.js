@@ -9,6 +9,8 @@ import Section from './Section';
 import CardProject from './CardProject';
 import CardPost from './CardPost';
 import TagFilter from './TagFilter';
+import HeadArticleProject from './HeadArticleProject';
+import CardProjectPortfolio from './CardProjectPortfolio';
 
 export {
   Icon,
@@ -22,4 +24,6 @@ export {
   CardProject,
   CardPost,
   TagFilter,
+  HeadArticleProject,
+  CardProjectPortfolio,
 };

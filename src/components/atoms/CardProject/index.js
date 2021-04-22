@@ -10,8 +10,8 @@ const CardProject = () => {
     >
       <img
         src="/image/coverskill.jpg"
-        alt="skill a"
-        className="rounded-tl-md rounded-bl-md w-3/5"
+        alt="skill"
+        className="rounded-tl-md rounded-bl-md w-[100%]"
       />
       <div className="p-6">
         <Heading text="Staycation.com" as={5} />
