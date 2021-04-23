@@ -18,7 +18,7 @@ const index = () => {
         <Icon icon="medium" hover circle />
         <Icon icon="instagram" hover circle />
       </div>
-      <Divider />
+      <Divider horizontal />
       <ul className="flex flex-col mt-4 mb-6 space-y-2 items-center">
         <li>
           <Link href="/">
@@ -33,7 +33,7 @@ const index = () => {
           </Link>
         </li>
         <li>
-          <Link href="">
+          <Link href="/resume">
             <a className="text-poppins text-base  hover:text-black-300">
               Resume
             </a>

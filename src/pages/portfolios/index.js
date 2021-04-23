@@ -37,7 +37,7 @@ const PortfolioPage = () => {
               <TagFilter tagText="React JS" />
             </div>
             <ProjectSection headingOff>
-              <div className="flex flex-col space-y-8 items-center">
+              <div className="flex flex-col  space-y-8 items-center">
                 <CardProjectPortfolio />
                 <CardProjectPortfolio />
                 <CardProjectPortfolio />

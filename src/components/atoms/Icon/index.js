@@ -39,6 +39,19 @@ const Icon = ({ icon, link, hover, circle, size }) => {
         return settypeIcon('ic-back.svg');
       case 'link':
         return settypeIcon('ic-link.svg');
+      case 'download':
+        return settypeIcon('ic-download.svg');
+      case 'wa':
+        return settypeIcon('ic-wa.svg');
+      case 'email':
+        return settypeIcon('ic-email.svg');
+      case 'location':
+        return settypeIcon('ic-location.svg');
+      case 'web':
+        return settypeIcon('ic-web.svg');
+      case 'github':
+        return settypeIcon('ic-github.svg');
+
       default:
         return settypeIcon('ic-linkedin.svg');
     }

@@ -9,6 +9,7 @@ import Footer from './Footer';
 import HeaderSection from './HeaderSection';
 import CoverHeadSection from './CoverHeadSection';
 import ContentStudyCase from './ContentStudyCase';
+import OnlineResume from './OnlineResume';
 
 export {
   Navbar,
@@ -22,4 +23,5 @@ export {
   HeaderSection,
   CoverHeadSection,
   ContentStudyCase,
+  OnlineResume,
 };
