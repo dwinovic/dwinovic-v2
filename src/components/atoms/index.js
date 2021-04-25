@@ -12,6 +12,7 @@ import TagFilter from './TagFilter';
 import HeadArticleProject from './HeadArticleProject';
 import CardProjectPortfolio from './CardProjectPortfolio';
 import FormInput from './FormInput';
+import AnchorText from './AnchorText';
 
 export {
   Icon,
@@ -28,4 +29,5 @@ export {
   HeadArticleProject,
   CardProjectPortfolio,
   FormInput,
+  AnchorText,
 };

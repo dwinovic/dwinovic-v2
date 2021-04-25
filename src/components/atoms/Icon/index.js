@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
 import Image from 'next/image';
+import PropTypes from 'prop-types';
+import React, { useEffect, useState } from 'react';
 
-const Icon = ({ icon, link, hover, circle, size, type }) => {
+const Icon = ({ icon, href, hover, circle, size }) => {
   const [typeIcon, settypeIcon] = useState('');
 
   useEffect(() => {
@@ -73,8 +73,8 @@ const Icon = ({ icon, link, hover, circle, size, type }) => {
   return (
     <div>
       <a
-        target={link ? '_blank' : null}
-        href={link}
+        target={href ? '_blank' : null}
+        href={href}
         className="flex items-center justify-center"
       >
         <Image
@@ -92,7 +92,10 @@ const Icon = ({ icon, link, hover, circle, size, type }) => {
 
 Icon.propTypes = {
   icon: PropTypes.string,
-  link: PropTypes.string,
+  href: PropTypes.string,
+  hover: PropTypes.string,
+  circle: PropTypes.bool,
+  size: PropTypes.number,
 };
 
 export default Icon;

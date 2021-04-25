@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import Link from 'next/link';
+import PropTypes from 'prop-types';
+import React from 'react';
 import Icon from '../Icon';
 
-const Button = ({ title, icon, btnIcon, yellow, type }) => {
-  const [disable, setDisable] = useState(false);
+const Button = ({ title, icon, btnIcon, yellow, type, href, target }) => {
   const ButtonType = () => {
     if (type === 'fill') {
       return (
@@ -72,7 +73,35 @@ const Button = ({ title, icon, btnIcon, yellow, type }) => {
     return <ButtonType />;
   };
 
-  return <IsBtn />;
+  return (
+    <>
+      {target && (
+        <Link href={`${href}`}>
+          <a target="_blank">
+            <IsBtn />
+          </a>
+        </Link>
+      )}
+      {!target && (
+        <Link href={`${href}`}>
+          <a>
+            <IsBtn />
+          </a>
+        </Link>
+      )}
+    </>
+  );
 };
 
 export default Button;
+
+Button.propTypes = {
+  title: PropTypes.string,
+  icon: PropTypes.string,
+  btnIcon: PropTypes.string,
+  yellow: PropTypes.string,
+  type: PropTypes.string,
+  href: PropTypes.string,
+  target: PropTypes.string,
+  target: PropTypes.bool,
+};

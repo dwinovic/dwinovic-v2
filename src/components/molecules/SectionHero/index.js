@@ -17,8 +17,14 @@ const index = () => {
       portfolio and online resume."
         />
         <div className="flex space-x-4">
-          <Button title="View Portfolio" btnIcon icon="check" yellow />
-          <Button title="View Resume" />
+          <Button
+            title="View Portfolio"
+            btnIcon
+            icon="check"
+            yellow
+            href="/portfolios"
+          />
+          <Button title="View Resume" href="/resume" />
         </div>
       </div>
       <div className="flex items-center justify-center w-5/12 ">

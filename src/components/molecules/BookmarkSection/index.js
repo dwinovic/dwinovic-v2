@@ -12,7 +12,7 @@ const BookmarkSection = () => {
         <CardPost />
       </div>
       <div className="mt-8 flex justify-center">
-        <Button title="More Posts" yellow />
+        <Button title="More Posts" yellow href="/bookmarks" />
       </div>
     </Section>
   );

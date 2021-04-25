@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { Button, Divider, Icon, NavButton } from '../../atoms';
+import { AnchorText, Button, Divider, Icon, NavButton } from '../../atoms';
 import Link from 'next/link';
 
 const index = () => {
@@ -13,49 +13,52 @@ const index = () => {
         I'm a software engineer specialised in web and mobile development for.
       </p>
       <div className="flex justify-center space-x-4 mb-4">
-        <Icon icon="linkedin" hover circle />
-        <Icon icon="twitter" hover circle />
-        <Icon icon="medium" hover circle />
-        <Icon icon="instagram" hover circle />
+        <Icon
+          icon="linkedin"
+          hover
+          circle
+          href="https://www.linkedin.com/in/dwinovic/"
+        />
+        <Icon
+          icon="twitter"
+          hover
+          circle
+          href="https://twitter.com/dwinovic_"
+        />
+        <Icon icon="medium" hover circle href="https://medium.com/@dwinovic" />
+        <Icon
+          icon="instagram"
+          hover
+          circle
+          href="https://www.instagram.com/dwinovic_/"
+        />
       </div>
       <Divider horizontal />
       <ul className="flex flex-col mt-4 mb-6 space-y-2 items-center">
         <li>
-          <Link href="/">
-            <a className="text-poppins text-base hover:text-black-300">Home</a>
-          </Link>
+          <AnchorText href="/">Home</AnchorText>
         </li>
         <li>
-          <Link href="/portfolios">
-            <a className="text-poppins text-base hover:text-black-300">
-              Portfolio
-            </a>
-          </Link>
+          <AnchorText href="/portfolios">Projects</AnchorText>
         </li>
         <li>
-          <Link href="/resume">
-            <a className="text-poppins text-base  hover:text-black-300">
-              Resume
-            </a>
-          </Link>
+          <AnchorText href="/resume">Resume</AnchorText>
         </li>
         <li>
-          <Link href="/bookmarks">
-            <a className="text-poppins text-base hover:text-black-300">
-              Bookmarks
-            </a>
-          </Link>
+          <AnchorText href="/bookmarks">Bookmarks</AnchorText>
         </li>
         <li>
-          <Link href="/contact">
-            <a className="text-poppins text-base hover:text-black-300">
-              Contact
-            </a>
-          </Link>
+          <AnchorText href="/contact">Contact</AnchorText>
         </li>
       </ul>
       <div className="flex justify-center">
-        <Button title="Hire Me" btnIcon icon="send" />
+        <Button
+          title="Hire Me"
+          btnIcon
+          icon="send"
+          href="https://www.linkedin.com/in/dwinovic/"
+          target
+        />
       </div>
     </div>
   );

@@ -31,10 +31,30 @@ const HeaderSection = ({
         )}
         {btnSosmed && (
           <div className="flex space-x-4">
-            <Icon icon="linkedin-light" hover="dark" circle />
-            <Icon icon="twitter-light" hover="dark" circle />
-            <Icon icon="medium-light" hover="dark" circle />
-            <Icon icon="instagram-light" hover="dark" circle />
+            <Icon
+              icon="linkedin-light"
+              hover="dark"
+              circle
+              href="https://www.linkedin.com/in/dwinovic/"
+            />
+            <Icon
+              icon="twitter-light"
+              hover="dark"
+              circle
+              href="https://twitter.com/dwinovic_"
+            />
+            <Icon
+              icon="medium-light"
+              hover="dark"
+              circle
+              href="https://medium.com/@dwinovic"
+            />
+            <Icon
+              icon="instagram-light"
+              hover="dark"
+              circle
+              href="https://www.instagram.com/dwinovic_/"
+            />
           </div>
         )}
         {!btnInfo && !btnSosmed && (
