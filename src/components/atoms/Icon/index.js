@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Image from 'next/image';
 
-const Icon = ({ icon, link, hover, circle, size }) => {
+const Icon = ({ icon, link, hover, circle, size, type }) => {
   const [typeIcon, settypeIcon] = useState('');
 
   useEffect(() => {
@@ -19,6 +19,14 @@ const Icon = ({ icon, link, hover, circle, size }) => {
         return settypeIcon('ic-medium.svg');
       case 'instagram':
         return settypeIcon('ic-instagram.svg');
+      case 'linkedin-light':
+        return settypeIcon('ic-linkedin-light.svg');
+      case 'twitter-light':
+        return settypeIcon('ic-twitter-light.svg');
+      case 'medium-light':
+        return settypeIcon('ic-medium-light.svg');
+      case 'instagram-light':
+        return settypeIcon('ic-instagram-light.svg');
       case 'home':
         return settypeIcon('ic-home.svg');
       case 'star':
@@ -57,6 +65,11 @@ const Icon = ({ icon, link, hover, circle, size }) => {
     }
   };
 
+  const hoverVariant = {
+    dark: 'hover:bg-black-300',
+    light: 'hover:bg-yellow-300',
+  };
+
   return (
     <div>
       <a
@@ -68,7 +81,7 @@ const Icon = ({ icon, link, hover, circle, size }) => {
           src={`/icons/${typeIcon}`}
           height={size ? `${size}` : 30}
           width={size ? `${size}` : 30}
-          className={`${hover ? 'hover:bg-black-300' : null} ${
+          className={`${hover ? `${hoverVariant.light}` : null} ${
             circle ? 'rounded-full' : null
           }  scale-100 `}
         />

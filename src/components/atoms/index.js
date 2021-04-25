@@ -11,6 +11,7 @@ import CardPost from './CardPost';
 import TagFilter from './TagFilter';
 import HeadArticleProject from './HeadArticleProject';
 import CardProjectPortfolio from './CardProjectPortfolio';
+import FormInput from './FormInput';
 
 export {
   Icon,
@@ -26,4 +27,5 @@ export {
   TagFilter,
   HeadArticleProject,
   CardProjectPortfolio,
+  FormInput,
 };

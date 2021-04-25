@@ -47,7 +47,11 @@ const index = () => {
           </Link>
         </li>
         <li>
-          <a className="text-poppins text-base hover:text-black-300">Contact</a>
+          <Link href="/contact">
+            <a className="text-poppins text-base hover:text-black-300">
+              Contact
+            </a>
+          </Link>
         </li>
       </ul>
       <div className="flex justify-center">

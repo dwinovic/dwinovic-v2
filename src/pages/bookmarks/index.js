@@ -20,7 +20,7 @@ const Bookmarks = () => {
           heading="The Bookmarks About Software Development And Life"
           desc="Beberapa hal menarik yang saya temui di internet"
           btnTitle="Last Update: Mon, 8 Feb 2021 - 10.35 am"
-          info
+          btnInfo
         />
         <div className="container mx-auto pt-8 flex relative">
           <div className="w-72">
