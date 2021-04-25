@@ -1,14 +1,5 @@
 import Head from 'next/head';
-import {
-  Divider,
-  Footer,
-  HeaderSection,
-  Heading,
-  Icon,
-  Navbar,
-  OnlineResume,
-  Paragraph,
-} from '../../components';
+import { Footer, HeaderSection, Navbar, OnlineResume } from '../../components';
 
 const Resume = () => {
   return (

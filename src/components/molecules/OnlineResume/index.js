@@ -67,7 +67,7 @@ const MedsosList = ({ icon, link, title }) => {
 
 const index = () => {
   return (
-    <div className="w-[80%] bg-black-200 rounded-xl  p-8">
+    <div className="w-[80%] bg-black-100 rounded-xl  p-8">
       {/* START: Heading Section */}
       <div className="flex mb-8 justify-between">
         <div className="">

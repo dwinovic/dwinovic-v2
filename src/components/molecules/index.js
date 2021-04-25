@@ -10,6 +10,7 @@ import HeaderSection from './HeaderSection';
 import CoverHeadSection from './CoverHeadSection';
 import ContentStudyCase from './ContentStudyCase';
 import OnlineResume from './OnlineResume';
+import BookmarkItem from './BookmarkItem';
 
 export {
   Navbar,
@@ -24,4 +25,5 @@ export {
   CoverHeadSection,
   ContentStudyCase,
   OnlineResume,
+  BookmarkItem,
 };

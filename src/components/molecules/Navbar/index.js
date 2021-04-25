@@ -40,9 +40,11 @@ const index = () => {
           </Link>
         </li>
         <li>
-          <a className="text-poppins text-base hover:text-black-300">
-            Bookmarks
-          </a>
+          <Link href="/bookmarks">
+            <a className="text-poppins text-base hover:text-black-300">
+              Bookmarks
+            </a>
+          </Link>
         </li>
         <li>
           <a className="text-poppins text-base hover:text-black-300">Contact</a>
