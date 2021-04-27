@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 const index = () => {
   return (
-    <div className="py-8 px-4 bg-white rounded-xl border-2 border-black-100 shadow-sm sticky top-8">
+    <div className="navbar-padding navbar-bg rounded-xl border-2 border-black-100 shadow-sm sticky top-8">
       <h1 className="text-2xl font-bold font-poppins text-black-500 text-center mb-4">
         Dwinovic
       </h1>

@@ -10,7 +10,7 @@ const index = () => {
         text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus quis ornare adipiscing ac cursus maecenas. Mauris habitasse non mi consequat. Laoreet feugiat nisi ac quam eleifend malesuada turpis consectetur. Aliquet ut aenean tristique purus suspendisse donec ut."
         addClass="mt-4"
       />
-      <div className="grid grid-cols-4 grid-rows-2 gap-4">
+      <div className="grid 2xl:grid-cols-4 xl:grid-cols-3 lg:grid-cols-2 gap-4">
         <CardSkill />
         <CardSkill />
         <CardSkill />

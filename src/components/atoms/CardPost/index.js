@@ -5,7 +5,7 @@ import TagCapsule from '../TagCapsule';
 
 const CardPost = () => {
   return (
-    <a className="hover:bg-black-500 bg-black-400 w-80 rounded-lg shadow-xl">
+    <a className="hover:bg-black-500 bg-black-400 w-80 rounded-lg shadow-xl ">
       <img src="/image/blogpost.jpg" className="rounded-tl-lg rounded-tr-lg" />
       <div className="p-4 ">
         <Heading text="How to Make Dream Come True" as={5} color="text-white" />

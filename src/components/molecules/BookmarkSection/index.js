@@ -5,11 +5,16 @@ const BookmarkSection = () => {
   return (
     <Section>
       <HeadingSection text="Latest Bookmarks Posts" />
-      <div className="mt-6 grid gap-28 grid-cols-4 ">
-        <CardPost />
-        <CardPost />
-        <CardPost />
-        <CardPost />
+      <div className="overflow-x-scroll w-[100%] h-[580px] relative">
+        <div className="mt-6 flex space-x-4 absolute">
+          <CardPost />
+          <CardPost />
+          <CardPost />
+          <CardPost />
+          <CardPost />
+          <CardPost />
+          <CardPost />
+        </div>
       </div>
       <div className="mt-8 flex justify-center">
         <Button title="More Posts" yellow href="/bookmarks" />

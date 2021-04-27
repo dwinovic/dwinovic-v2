@@ -13,6 +13,7 @@ import HeadArticleProject from './HeadArticleProject';
 import CardProjectPortfolio from './CardProjectPortfolio';
 import FormInput from './FormInput';
 import AnchorText from './AnchorText';
+import NavbarTop from './NavbarTop';
 
 export {
   Icon,
@@ -30,4 +31,5 @@ export {
   CardProjectPortfolio,
   FormInput,
   AnchorText,
+  NavbarTop,
 };

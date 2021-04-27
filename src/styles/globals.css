@@ -6,3 +6,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* START: Navbar Components */
+.navbar-bg {
+  @apply bg-gray-200;
+}
+.navbar-padding {
+  @apply xl:py-8 xl:px-4 py-5  px-5;
+}
+/* END: Navbar Components */
