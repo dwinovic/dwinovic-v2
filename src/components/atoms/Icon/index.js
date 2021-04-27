@@ -61,6 +61,8 @@ const Icon = ({ icon, href, hover, circle, size }) => {
         return settypeIcon('ic-github.svg');
       case 'burger':
         return settypeIcon('ic-burger.svg');
+      case 'burger-light':
+        return settypeIcon('ic-burger-light.svg');
 
       default:
         return settypeIcon('ic-linkedin.svg');

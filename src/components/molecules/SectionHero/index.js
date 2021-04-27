@@ -3,10 +3,10 @@ import { Button, Heading, Paragraph, Section } from '../../atoms';
 
 const index = () => {
   return (
-    <Section addClass="flex">
-      <div className="flex flex-col w-7/12  justify-center">
+    <Section addClass="flex sm:flex-col-reverse sm:items-center ">
+      <div className="flex flex-col w-7/12  justify-center ">
         <Heading as={3} text="Hi I'am" />
-        <h1 className="font-bold font-poppins text-7xl text-black-500 mb-4">
+        <h1 className="font-bold font-poppins 2xl:text-7xl xl:text-6xl lg:text-6xl md:text-4xl sm:text-4xl text-black-500 mb-4">
           Dwinovic
         </h1>
         <Paragraph
@@ -27,7 +27,7 @@ const index = () => {
           <Button title="View Resume" href="/resume" />
         </div>
       </div>
-      <div className="flex items-center justify-center w-5/12 ">
+      <div className="flex items-center justify-center w-5/12 sm:w-[60%]">
         <img src="/image/hero-profile.png" className="w-full" />
       </div>
     </Section>

@@ -14,7 +14,7 @@ const TagCapsule = ({ textTag, disable }) => {
 
   return (
     <div
-      className={` ${
+      className={`flex self-start ${
         disable ? `${className.disable.button}` : `${className.default.button}`
       }`}
     >

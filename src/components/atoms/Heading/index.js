@@ -7,13 +7,31 @@ const Heading = ({ as, text, addClass, color }) => {
   }  ${addClass}`;
 
   const Head1 = () => {
-    return <h1 className={`${headClass} ${addClass} text-5xl my-2`}>{text}</h1>;
+    return (
+      <h1
+        className={`${headClass} ${addClass} lg:text-5xl md:text-3xl sm:text-3xl my-2`}
+      >
+        {text}
+      </h1>
+    );
   };
   const Head2 = () => {
-    return <h2 className={`${headClass} ${addClass} text-4xl`}>{text}</h2>;
+    return (
+      <h2
+        className={`${headClass} ${addClass} 2xl:text-4xl xl:text-3xl lg:text-2xl md:text-xl sm:text-lg`}
+      >
+        {text}
+      </h2>
+    );
   };
   const Head3 = () => {
-    return <h3 className={`${headClass} ${addClass} text-3xl my-2`}>{text}</h3>;
+    return (
+      <h3
+        className={`${headClass} ${addClass} 2xl:text-3xl xl:text-3xl lg:text-2xl md:text-2xlg sm:text-2xl my-2`}
+      >
+        {text}
+      </h3>
+    );
   };
   const Head4 = () => {
     return <h4 className={`${headClass} ${addClass} text-2xl`}>{text}</h4>;

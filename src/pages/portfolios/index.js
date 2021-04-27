@@ -6,6 +6,7 @@ import {
   HeaderSection,
   Heading,
   Navbar,
+  NavbarTop,
   ProjectSection,
   Section,
   SectionHero,
@@ -20,11 +21,14 @@ const PortfolioPage = () => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <body>
+        <NavbarTop dark />
+
         <HeaderSection
           heading="Portfolio"
           desc="Welcome to my online portfolio. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. I'm taking on freelance work at the moment. Want some help building your software?"
           btnTitle="Hire Me"
         />
+
         <div className="container mx-auto pt-8 flex relative">
           <div className="w-72">
             <Navbar />
@@ -37,7 +41,7 @@ const PortfolioPage = () => {
               <TagFilter tagText="React JS" />
             </div>
             <ProjectSection headingOff>
-              <div className="flex flex-col  space-y-8 items-center">
+              <div className="flex flex-col  space-y-6 items-center">
                 <CardProjectPortfolio />
                 <CardProjectPortfolio />
                 <CardProjectPortfolio />
