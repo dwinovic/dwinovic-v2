@@ -4,6 +4,7 @@ import {
   HeaderSection,
   Navbar,
   FormInput,
+  NavbarTop,
   Footer,
 } from '../../components';
 
@@ -19,6 +20,8 @@ const Contact = () => {
         id="contactpage"
       >
         <div>
+          <NavbarTop dark />
+          <div className="h-16 bg-blue-200 2xl:hidden xl:hidden lg:hidden md:block sm:block"></div>
           <HeaderSection
             heading="Get In Touch"
             desc="Interested in hiring me for your project or just want to say hi? You can fill in the contact form below or send me an email to simon.doe@yourwebsite.com"
@@ -26,7 +29,7 @@ const Contact = () => {
             btnSosmed
           />
           <div className="container mx-auto pt-8 flex relative">
-            <div className="w-72">
+            <div className="md:hidden sm:hidden lg:w-72 lg:block xl:block 2xl:inline">
               <Navbar />
             </div>
             <div className="w-full px-8 flex">

@@ -90,7 +90,11 @@ const index = () => {
       {/* END: Heading Section */}
       {/* START: Profile */}
       <div className="flex my-8 space-x-4">
-        <img src="/image/profile.png" className="w-[150px]" />
+        <img
+          src="/image/profile.png"
+          className=" 2xl:w-48 2xl:h-48 xl:w-44 xl:h-44 lg:w-40 lg:h-40 md:w-32 md:h-32 sm:w-32 sm:h-32"
+        />
+
         <Text>
           Summarise your career here. You can make a PDF version of your resume
           using our free Sketch template here. Donec quam felis, ultricies nec,

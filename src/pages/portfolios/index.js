@@ -22,7 +22,7 @@ const PortfolioPage = () => {
       </Head>
       <body>
         <NavbarTop dark />
-
+        <div className="h-16 bg-blue-200 2xl:hidden xl:hidden lg:hidden md:block sm:block"></div>
         <HeaderSection
           heading="Portfolio"
           desc="Welcome to my online portfolio. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. I'm taking on freelance work at the moment. Want some help building your software?"
@@ -30,7 +30,7 @@ const PortfolioPage = () => {
         />
 
         <div className="container mx-auto pt-8 flex relative">
-          <div className="w-72">
+          <div className="md:hidden sm:hidden lg:w-72 lg:block xl:block 2xl:inline">
             <Navbar />
           </div>
           <div className="w-full px-8 ">

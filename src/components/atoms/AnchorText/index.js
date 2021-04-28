@@ -6,7 +6,11 @@ const AnchorText = ({ children, href, dark }) => {
   return (
     <Link href={`${href}`}>
       <a
-        className={`text-poppins text-base hover:text-black-300 active:text-yellow-400`}
+        className={`text-poppins text-base  active:text-yellow-400 ${
+          dark
+            ? 'text-black-200 hover:text-white'
+            : 'text-black-500 hover:text-black-300'
+        }`}
       >
         {children}
       </a>

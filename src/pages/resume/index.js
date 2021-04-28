@@ -1,5 +1,11 @@
 import Head from 'next/head';
-import { Footer, HeaderSection, Navbar, OnlineResume } from '../../components';
+import {
+  Footer,
+  HeaderSection,
+  Navbar,
+  OnlineResume,
+  NavbarTop,
+} from '../../components';
 
 const Resume = () => {
   return (
@@ -9,9 +15,11 @@ const Resume = () => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <body>
+        <NavbarTop dark />
+        <div className="h-4 bg-blue-200 2xl:hidden xl:hidden lg:hidden md:block sm:block"></div>
         <HeaderSection heading="Online Resume" btnTitle="Download as a PDF" />
         <div className="container mx-auto pt-8 flex relative">
-          <div className="w-72">
+          <div className="md:hidden sm:hidden lg:w-72 lg:block xl:block 2xl:inline">
             <Navbar />
           </div>
           <div className="flex w-full justify-center mb-8">

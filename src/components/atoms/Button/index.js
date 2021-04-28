@@ -3,7 +3,16 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import Icon from '../Icon';
 
-const Button = ({ title, icon, btnIcon, yellow, type, href, target }) => {
+const Button = ({
+  title,
+  icon,
+  btnIcon,
+  yellow,
+  type,
+  href,
+  target,
+  addClass,
+}) => {
   const ButtonType = () => {
     if (type === 'fill') {
       return (
@@ -51,7 +60,7 @@ const Button = ({ title, icon, btnIcon, yellow, type, href, target }) => {
     if (btnIcon) {
       return (
         <button
-          className={`flex space-x-2 items-center py-2 px-2 rounded-lg ${
+          className={`flex space-x-2 items-center ${addClass} py-2 px-2 rounded-lg ${
             yellow
               ? 'bg-yellow-400 hover:bg-yellow-500'
               : 'bg-black-400 hover:bg-black-500'

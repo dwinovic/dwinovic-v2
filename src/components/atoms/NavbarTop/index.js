@@ -8,6 +8,7 @@ import { CSSTransition } from 'react-transition-group';
 
 const NavbarTop = ({ dark, light }) => {
   const [open, setOpen] = useState(false);
+
   useEffect(() => {
     console.log(open);
   }, []);
@@ -16,7 +17,7 @@ const NavbarTop = ({ dark, light }) => {
     <div className="md:block sm:block lg:hidden lg:hidden xl:hidden 2xl:hidden">
       <div
         className={` ${
-          light ? 'bg-white fixed' : 'bg-gray-500 sticky top-0'
+          light ? 'bg-white fixed' : 'bg-gray-500 fixed top-0'
         } z-10 inset-x-0 `}
       >
         <div className="py-4 px-8 flex justify-between">
@@ -24,7 +25,7 @@ const NavbarTop = ({ dark, light }) => {
             <a>
               <h1
                 className={`text-2xl font-bold font-poppins ${
-                  light ? 'text-black-400' : 'text-black-100'
+                  light ? 'text-black-400' : 'text-black-300 hover:text-white'
                 } tracking-wide uppercase text-center`}
               >
                 Dwinovic
@@ -39,27 +40,27 @@ const NavbarTop = ({ dark, light }) => {
           <div className="sm:hidden md:block">
             <ul className="flex space-x-4">
               <li>
-                <AnchorText dark href="/">
+                <AnchorText dark={dark ? true : false} href="/">
                   Home
                 </AnchorText>
               </li>
               <li>
-                <AnchorText dark href="/portfolios">
+                <AnchorText dark={dark ? true : false} href="/portfolios">
                   Projects
                 </AnchorText>
               </li>
               <li>
-                <AnchorText dark href="/resume">
+                <AnchorText dark={dark ? true : false} href="/resume">
                   Resume
                 </AnchorText>
               </li>
               <li>
-                <AnchorText dark href="/bookmarks">
+                <AnchorText dark={dark ? true : false} href="/bookmarks">
                   Bookmarks
                 </AnchorText>
               </li>
               <li>
-                <AnchorText dark href="/contact">
+                <AnchorText dark={dark ? true : false} href="/contact">
                   Contact
                 </AnchorText>
               </li>

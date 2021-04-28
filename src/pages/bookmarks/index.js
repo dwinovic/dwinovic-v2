@@ -3,8 +3,8 @@ import {
   BookmarkItem,
   Footer,
   HeaderSection,
-  Heading,
   Navbar,
+  NavbarTop,
   TagFilter,
 } from '../../components';
 
@@ -16,6 +16,8 @@ const Bookmarks = () => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <body>
+        <NavbarTop dark />
+        <div className="h-16 bg-blue-200 2xl:hidden xl:hidden lg:hidden md:block sm:block"></div>
         <HeaderSection
           heading="The Bookmarks About Software Development And Life"
           desc="Beberapa hal menarik yang saya temui di internet"
@@ -23,7 +25,7 @@ const Bookmarks = () => {
           btnInfo
         />
         <div className="container mx-auto pt-8 flex relative">
-          <div className="w-72">
+          <div className="md:hidden sm:hidden lg:w-72 lg:block xl:block 2xl:inline">
             <Navbar />
           </div>
           <div className="w-full px-8">
