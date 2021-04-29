@@ -23,10 +23,11 @@ const CardProject = () => {
           <TagCapsule textTag="HTML" />
           <TagCapsule textTag="JavaScript" />
         </div>
-        <Paragraph
-          text="List skills/technologies here. You can change the icon above to any of the 1500+ FontAwesome 5 free icons available. Aenean commodo ligula eget dolor."
-          addClass
-        />
+        <Paragraph addClass>
+          List skills/technologies here. You can change the icon above to any of
+          the 1500+ FontAwesome 5 free icons available. Aenean commodo ligula
+          eget dolor
+        </Paragraph>
       </div>
     </a>
   );

@@ -3,11 +3,11 @@ import {
   BookmarkSection,
   CardProject,
   Footer,
-  Navbar,
   ProjectSection,
   SectionHero,
   SkillSection,
   NavbarTop,
+  BodyContent,
 } from '../components';
 
 export default function Home() {
@@ -19,10 +19,7 @@ export default function Home() {
       </Head>
       <body>
         <NavbarTop light />
-        <div className="container mx-auto pt-8 flex relative">
-          <div className="md:hidden sm:hidden lg:w-72 lg:block xl:block 2xl:inline">
-            <Navbar />
-          </div>
+        <BodyContent>
           <div className="w-full px-8">
             <SectionHero />
             <SkillSection />
@@ -37,7 +34,7 @@ export default function Home() {
             <BookmarkSection />
             <Footer />
           </div>
-        </div>
+        </BodyContent>
       </body>
     </>
   );

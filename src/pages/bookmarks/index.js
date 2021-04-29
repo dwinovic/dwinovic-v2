@@ -1,9 +1,9 @@
 import Head from 'next/head';
 import {
+  BodyContent,
   BookmarkItem,
   Footer,
   HeaderSection,
-  Navbar,
   NavbarTop,
   TagFilter,
 } from '../../components';
@@ -24,10 +24,7 @@ const Bookmarks = () => {
           btnTitle="Last Update: Mon, 8 Feb 2021 - 10.35 am"
           btnInfo
         />
-        <div className="container mx-auto pt-8 flex relative">
-          <div className="md:hidden sm:hidden lg:w-72 lg:block xl:block 2xl:inline">
-            <Navbar />
-          </div>
+        <BodyContent>
           <div className="w-full px-8">
             <div className="flex flex-wrap w-[60%] mx-auto space-x-4 pt-4  items-center justify-center">
               <TagFilter tagText="Productive" />
@@ -59,7 +56,7 @@ const Bookmarks = () => {
             </div>
             <Footer />
           </div>
-        </div>
+        </BodyContent>
       </body>
     </>
   );

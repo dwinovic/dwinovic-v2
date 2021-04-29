@@ -1,15 +1,11 @@
 import Head from 'next/head';
 import {
-  CardProject,
+  BodyContent,
   CardProjectPortfolio,
   Footer,
   HeaderSection,
-  Heading,
-  Navbar,
   NavbarTop,
   ProjectSection,
-  Section,
-  SectionHero,
   TagFilter,
 } from '../../components';
 
@@ -29,10 +25,7 @@ const PortfolioPage = () => {
           btnTitle="Hire Me"
         />
 
-        <div className="container mx-auto pt-8 flex relative">
-          <div className="md:hidden sm:hidden lg:w-72 lg:block xl:block 2xl:inline">
-            <Navbar />
-          </div>
+        <BodyContent>
           <div className="w-full px-8 ">
             <div className="flex space-x-4 pt-4 justify-center">
               <TagFilter tagText="React JS" />
@@ -49,7 +42,7 @@ const PortfolioPage = () => {
             </ProjectSection>
             <Footer />
           </div>
-        </div>
+        </BodyContent>
       </body>
     </>
   );

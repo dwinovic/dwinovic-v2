@@ -16,11 +16,12 @@ const HeaderSection = ({
         <Heading text={heading} as={1} color="text-white text-center" />
         {desc && (
           <Paragraph
-            text={desc}
             color="white"
-            addClass="text-center tracking-wide"
+            addClass="text-center tracking-wide mt-2"
             variant={16}
-          />
+          >
+            {desc}
+          </Paragraph>
         )}
         {btnInfo && (
           <div className="bg-yellow-600 py-0.5 px-4 mt-6 rounded-full">

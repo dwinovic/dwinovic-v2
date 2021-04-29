@@ -13,10 +13,11 @@ const CardPost = () => {
           <TagCapsule textTag="Life" disable />
           <TagCapsule textTag="Life" disable />
         </div>
-        <Paragraph
-          text="List skills/technologies here. You can change the icon above to any of the 1500+ FontAwesome 5 free icons available. Aenean commodo ligula eget dolor."
-          color="white"
-        />
+        <Paragraph color="white">
+          List skills/technologies here. You can change the icon above to any of
+          the 1500+ FontAwesome 5 free icons available. Aenean commodo ligula
+          eget dolor.
+        </Paragraph>
         <p className="text-sm font-poppins text-black-200">
           Published 2 days ago
         </p>

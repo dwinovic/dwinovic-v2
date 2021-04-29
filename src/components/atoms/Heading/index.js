@@ -9,7 +9,7 @@ const Heading = ({ as, text, addClass, color }) => {
   const Head1 = () => {
     return (
       <h1
-        className={`${headClass} ${addClass} lg:text-5xl md:text-3xl sm:text-3xl my-2`}
+        className={`${headClass} ${addClass} lg:text-5xl md:text-3xl sm:text-3xl iphone:text-3xl android:text-3xl my-2`}
       >
         {text}
       </h1>
@@ -18,7 +18,7 @@ const Heading = ({ as, text, addClass, color }) => {
   const Head2 = () => {
     return (
       <h2
-        className={`${headClass} ${addClass} 2xl:text-4xl xl:text-3xl lg:text-2xl md:text-xl sm:text-lg`}
+        className={`${headClass} ${addClass} 2xl:text-4xl xl:text-3xl lg:text-2xl md:text-2xl sm:text-xl iphone:text-xl android:text-lg`}
       >
         {text}
       </h2>
@@ -27,20 +27,38 @@ const Heading = ({ as, text, addClass, color }) => {
   const Head3 = () => {
     return (
       <h3
-        className={`${headClass} ${addClass} 2xl:text-3xl xl:text-3xl lg:text-2xl md:text-2xlg sm:text-2xl my-2`}
+        className={`${headClass} ${addClass} 2xl:text-3xl xl:text-3xl lg:text-2xl md:text-2xl  sm:text-xl iphone:text-xl android:text-lg my-2`}
       >
         {text}
       </h3>
     );
   };
   const Head4 = () => {
-    return <h4 className={`${headClass} ${addClass} text-2xl`}>{text}</h4>;
+    return (
+      <h4
+        className={`${headClass} ${addClass} 2xl:text-2xl xl:text-2xl lg:text-xl md:text-xl  sm:text-xl iphone:text-lg android:text-lg`}
+      >
+        {text}
+      </h4>
+    );
   };
   const Head5 = () => {
-    return <h5 className={`${headClass} ${addClass} text-xl`}>{text}</h5>;
+    return (
+      <h5
+        className={`${headClass} ${addClass} 2xl:text-xl xl:text-xl lg:text-xl md:text-lg  sm:text-lg iphone:text-lg android:text-base`}
+      >
+        {text}
+      </h5>
+    );
   };
   const Head6 = () => {
-    return <h6 className={`${headClass} ${addClass} text-lg`}>{text}</h6>;
+    return (
+      <h6
+        className={`${headClass} ${addClass} 2xl:text-lg xl:text-lg lg:text-lg md:text-md  sm:text-md iphone:text-md android:text-base`}
+      >
+        {text}
+      </h6>
+    );
   };
 
   const ChooseHeading = () => {

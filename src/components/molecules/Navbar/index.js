@@ -10,7 +10,8 @@ const index = () => {
         Dwinovic
       </h1>
       <p className="font-poppins text-center mb-4 text-sm text-black-500 tracking-wide">
-        I'm a software engineer specialised in web and mobile development for.
+        Front-end developers currently create great web or mobile applications
+        using the React environment
       </p>
       <div className="flex justify-center space-x-4 mb-4">
         <Icon

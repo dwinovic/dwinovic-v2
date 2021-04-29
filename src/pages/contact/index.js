@@ -6,6 +6,7 @@ import {
   FormInput,
   NavbarTop,
   Footer,
+  BodyContent,
 } from '../../components';
 
 const Contact = () => {
@@ -28,14 +29,11 @@ const Contact = () => {
             btnTitle="Hire Me"
             btnSosmed
           />
-          <div className="container mx-auto pt-8 flex relative">
-            <div className="md:hidden sm:hidden lg:w-72 lg:block xl:block 2xl:inline">
-              <Navbar />
-            </div>
+          <BodyContent>
             <div className="w-full px-8 flex">
               <form className="flex flex-col space-y-4 w-[80%] mx-auto">
-                <div className="flex flex-cols space-x-4">
-                  <div className="w-1/2">
+                <div className="flex android:flex-col iphone:flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row 2xl:flex-row  android:space-y-4 iphone:space-y-4 md:space-y-0 lg:space-y-0 xl:space-y-0 2xl:space-y-0 md:space-x-4 lg:space-x-4 xl:space-x-4 2xl:space-x-4">
+                  <div className="android:w-full iphone:w-full sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2 2xl:w-1/2">
                     <FormInput
                       label="name"
                       id="name"
@@ -44,7 +42,7 @@ const Contact = () => {
                       type="text"
                     />
                   </div>
-                  <div className="w-1/2">
+                  <div className="android:w-full iphone:w-full sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2 2xl:w-1/2">
                     <FormInput
                       label="email"
                       id="email"
@@ -68,7 +66,7 @@ const Contact = () => {
                 </div>
               </form>
             </div>
-          </div>
+          </BodyContent>
         </div>
         <Footer />
       </body>
