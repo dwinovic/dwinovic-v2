@@ -7,6 +7,7 @@ import {
   Icon,
   Navbar,
   ContentStudyCase,
+  BodyContent,
 } from '../../../components';
 
 const StudyCaseProject = () => {
@@ -18,15 +19,12 @@ const StudyCaseProject = () => {
       </Head>
       <body>
         <CoverHeadSection />
-        <div className="container mx-auto pt-8 flex relative">
-          <div className="w-72">
-            <Navbar />
-          </div>
+        <BodyContent>
           <div className="w-full px-8 ">
             <HeadArticleProject />
             <ContentStudyCase />
           </div>
-        </div>
+        </BodyContent>
       </body>
     </>
   );

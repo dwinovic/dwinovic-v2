@@ -17,7 +17,7 @@ export default function Home() {
         <title>Dwinovic | Software Engineer</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <body>
+      <div>
         <NavbarTop light />
         <BodyContent>
           <div className="w-full px-8">
@@ -35,7 +35,7 @@ export default function Home() {
             <Footer />
           </div>
         </BodyContent>
-      </body>
+      </div>
     </>
   );
 }

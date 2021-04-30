@@ -97,7 +97,7 @@ const Icon = ({ icon, href, hover, circle, size }) => {
 Icon.propTypes = {
   icon: PropTypes.string,
   href: PropTypes.string,
-  hover: PropTypes.string,
+  hover: PropTypes.bool,
   circle: PropTypes.bool,
   size: PropTypes.number,
 };

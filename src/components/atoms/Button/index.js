@@ -107,8 +107,8 @@ export default Button;
 Button.propTypes = {
   title: PropTypes.string,
   icon: PropTypes.string,
-  btnIcon: PropTypes.string,
-  yellow: PropTypes.string,
+  btnIcon: PropTypes.bool,
+  yellow: PropTypes.bool,
   type: PropTypes.string,
   href: PropTypes.string,
   target: PropTypes.string,

@@ -13,6 +13,5 @@ export default Section;
 
 Section.propTypes = {
   addClass: PropTypes.string,
-  children: PropTypes.element,
   id: PropTypes.string,
 };

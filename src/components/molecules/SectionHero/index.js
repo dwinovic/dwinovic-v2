@@ -14,7 +14,7 @@ const index = () => {
           outstanding web apps or mobile apps. Now the technology stack that I
           use to make this happen with the <b>React ecosystem environment,</b>{' '}
           be it <b>React JS or React Native.</b> Has a deep interest in web and
-          mobile development.
+          mobile development interface.
         </Paragraph>
 
         <div className="flex space-x-4">
