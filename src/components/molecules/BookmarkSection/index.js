@@ -11,7 +11,9 @@ const BookmarkSection = ({ data }) => {
           {data &&
             data.map((blog) => (
               <CardPost
-                image={reqDataHostName(blog.image_cover.url)}
+                image={reqDataHostName(
+                  blog.image_cover ? blog.image_cover.url : null
+                )}
                 title={blog.title}
                 desc={blog.desc}
                 tags={blog.tag_blogs}

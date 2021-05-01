@@ -8,8 +8,10 @@ import {
   ProjectSection,
   TagFilter,
 } from '../../components';
+import { fetchingData, reqDataHostName } from '../../utils';
 
-const PortfolioPage = () => {
+const PortfolioPage = ({ projects, tagProjects }) => {
+  console.log(tagProjects);
   return (
     <>
       <Head>
@@ -28,16 +30,28 @@ const PortfolioPage = () => {
         <BodyContent>
           <div className="w-full px-8 ">
             <div className="flex space-x-4 pt-4 justify-center">
-              <TagFilter tagText="React JS" />
-              <TagFilter tagText="React JS" />
-              <TagFilter tagText="React JS" />
-              <TagFilter tagText="React JS" />
+              {tagProjects &&
+                tagProjects.map((tag) => (
+                  <TagFilter key={tag.id} tagText={tag.tag_name} />
+                ))}
             </div>
             <ProjectSection headingOff>
               <div className="flex flex-col  space-y-6 items-center">
-                <CardProjectPortfolio />
-                <CardProjectPortfolio />
-                <CardProjectPortfolio />
+                {projects &&
+                  projects.map((project) => (
+                    <CardProjectPortfolio
+                      key={project.id}
+                      image={
+                        project.image_cover
+                          ? `${reqDataHostName(project.image_cover.url)}`
+                          : null
+                      }
+                      desc={project.desc}
+                      title={project.title}
+                      year={project.year}
+                      tags={project.tag_projects}
+                    />
+                  ))}
               </div>
             </ProjectSection>
             <Footer />
@@ -49,3 +63,12 @@ const PortfolioPage = () => {
 };
 
 export default PortfolioPage;
+
+export async function getStaticProps() {
+  const projects = await fetchingData('/projects');
+  const tagProjects = await fetchingData('/tag-projects');
+
+  return {
+    props: { projects, tagProjects },
+  };
+}

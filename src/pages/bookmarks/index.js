@@ -1,4 +1,6 @@
+import moment from 'moment';
 import Head from 'next/head';
+import { useEffect, useState } from 'react';
 import {
   BodyContent,
   BookmarkItem,
@@ -7,8 +9,16 @@ import {
   NavbarTop,
   TagFilter,
 } from '../../components';
+import { fetchingData, reqDataHostName } from '../../utils';
 
-const Bookmarks = () => {
+const Bookmarks = ({ blogs, tagBlogs, lastUpdate }) => {
+  const [date, setDate] = useState('');
+  useEffect(() => {
+    const string_date = lastUpdate.create_at;
+    const date = moment(string_date).format('MMMM Do YYYY, h:mm a');
+    const day = moment(string_date).format('dddd');
+    setDate(`${day}, ${date}`);
+  }, []);
   return (
     <>
       <Head>
@@ -21,38 +31,27 @@ const Bookmarks = () => {
         <HeaderSection
           heading="The Bookmarks About Software Development And Life"
           desc="Beberapa hal menarik yang saya temui di internet"
-          btnTitle="Last Update: Mon, 8 Feb 2021 - 10.35 am"
+          btnTitle={!lastUpdate ? null : `${date}`}
           btnInfo
         />
         <BodyContent>
           <div className="w-full px-8">
             <div className="flex flex-wrap w-[60%] mx-auto space-x-4 pt-4  items-center justify-center">
-              <TagFilter tagText="Productive" />
-              <TagFilter tagText="Technology" />
-              <TagFilter tagText="Learn" />
-              <TagFilter tagText="Success Story" />
-              <TagFilter tagText="Desing" />
-              <TagFilter tagText="Life" />
-              <TagFilter tagText="Impact" />
-              <TagFilter tagText="Impact" />
-              <TagFilter tagText="Impact" />
-              <TagFilter tagText="Impact" />
-              <TagFilter tagText="Impact" />
-              <TagFilter tagText="Impact" />
-              <TagFilter tagText="Impact" />
-              <TagFilter tagText="Impact" />
+              {tagBlogs &&
+                tagBlogs.map((tag) => (
+                  <TagFilter tagText={tag.tag_name} key={tag.id} />
+                ))}
             </div>
             <div className="grid 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 my-14 gap-4">
-              <BookmarkItem />
-              <BookmarkItem />
-              <BookmarkItem />
-              <BookmarkItem />
-              <BookmarkItem />
-              <BookmarkItem />
-              <BookmarkItem />
-              <BookmarkItem />
-              <BookmarkItem />
-              <BookmarkItem />
+              {blogs &&
+                blogs.map((blog) => (
+                  <BookmarkItem
+                    title={blog.title}
+                    desc={blog.desc}
+                    tags={blog.tag_blogs}
+                    date={blog.create_at}
+                  />
+                ))}
             </div>
             <Footer />
           </div>
@@ -63,3 +62,13 @@ const Bookmarks = () => {
 };
 
 export default Bookmarks;
+
+export async function getStaticProps() {
+  const blogs = await fetchingData('/blogs');
+  const tagBlogs = await fetchingData('/tag-blogs');
+  const sortDesc = await fetchingData('/blogs?_sort=create_at:DESC');
+  const lastUpdate = sortDesc[0];
+  return {
+    props: { blogs, tagBlogs, lastUpdate },
+  };
+}
