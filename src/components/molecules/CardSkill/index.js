@@ -1,18 +1,32 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Heading, Paragraph } from '../../atoms';
+import PropTypes from 'prop-types';
 
-function CardSkill() {
+function CardSkill({ icon, title, desc }) {
+  const [iconLogo, seticonLogo] = useState('/icons/ic-html.svg');
+
+  useEffect(() => {
+    icon && seticonLogo(icon);
+  }, []);
+
   return (
     <div className="box-border h-auto w-auto p-4  rounded-lg shadow-md ">
-      <img src="/icons/ic-html.svg" />
-      <Heading text="HTML5" as={5} addClass="my-2" />
+      <img
+        src={iconLogo}
+        className="2xl:w-[40px] xl:w-[40px] lg:w-[40px] md:w-[40px] sm:w-[36px] iphone:w-[32px] android:w-[32px]"
+      />
+      <Heading text={title} as={5} addClass="my-2" />
       <Paragraph variant={14} addClass="tracking-wide text-justify">
-        List skills/technologies here. You can change the icon above to any of
-        the 1500+ FontAwesome 5 free icons available. Aenean commodo ligula eget
-        dolor.
+        {desc}
       </Paragraph>
     </div>
   );
 }
 
 export default CardSkill;
+
+CardSkill.propTypes = {
+  icon: PropTypes.string,
+  title: PropTypes.string,
+  desc: PropTypes.string,
+};

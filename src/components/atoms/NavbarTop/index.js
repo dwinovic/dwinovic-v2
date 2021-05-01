@@ -9,10 +9,6 @@ import { CSSTransition } from 'react-transition-group';
 const NavbarTop = ({ dark, light }) => {
   const [open, setOpen] = useState(false);
 
-  useEffect(() => {
-    console.log(open);
-  }, []);
-
   return (
     <div className="android:block iphone:block md:block sm:block lg:hidden lg:hidden xl:hidden 2xl:hidden ">
       <div

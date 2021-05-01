@@ -9,8 +9,9 @@ import {
   NavbarTop,
   BodyContent,
 } from '../components';
+import { fetchingData, reqDataHostName } from '../utils';
 
-export default function Home() {
+export default function Home({ skills, projects, blogs }) {
   return (
     <>
       <Head>
@@ -22,20 +23,40 @@ export default function Home() {
         <BodyContent>
           <div className="w-full px-8">
             <SectionHero />
-            <SkillSection />
+            <SkillSection data={skills} />
             <ProjectSection>
               <div className="grid 2xl:grid-cols-2 xl:grid-cols-2 gap-4 mt-6">
-                <CardProject />
-                <CardProject />
-                <CardProject />
-                <CardProject />
+                {projects &&
+                  projects.map((project) => (
+                    <CardProject
+                      key={project.id}
+                      image={
+                        project.image_cover
+                          ? `${reqDataHostName(project.image_cover.url)}`
+                          : null
+                      }
+                      desc={project.desc}
+                      title={project.title}
+                      tags={project.tag_projects}
+                    />
+                  ))}
               </div>
             </ProjectSection>
-            <BookmarkSection />
+            <BookmarkSection data={blogs} />
             <Footer />
           </div>
         </BodyContent>
       </div>
     </>
   );
+}
+
+export async function getStaticProps() {
+  const skills = await fetchingData('/skills');
+  const projects = await fetchingData('/projects');
+  const blogs = await fetchingData('/blogs');
+
+  return {
+    props: { skills, projects, blogs },
+  };
 }

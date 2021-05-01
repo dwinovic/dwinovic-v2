@@ -7,10 +7,10 @@ const Paragraph = ({ text, children, variant, addClass, color }) => {
     white: 'text-white',
   };
   const textVariant = {
-    12: 'text-xs',
-    14: 'text-sm',
-    16: 'text-base',
-    20: 'text-lg',
+    12: '2xl:text-xs xl:text-xs lg:text-xs md:text-xs sm:text-xs iphone:text-xs android:text-xs',
+    14: '2xl:text-sm xl:text-sm lg:text-sm md:text-sm sm:text-sm iphone:text-sm android:text-sm',
+    16: '2xl:text-base xl:text-base lg:text-base md:text-sm sm:text-sm iphone:text-sm android:text-sm',
+    20: '2xl:text-xl xl:text-xl lg:text-lg md:text-lg sm:text-base iphone:text-base android:text-base',
   };
 
   const chooseVariant = textVariant[variant];
@@ -19,7 +19,7 @@ const Paragraph = ({ text, children, variant, addClass, color }) => {
     <p
       className={`font-lato ${
         color === 'white' ? `${colors.white}` : `${colors.dark}`
-      } ${chooseVariant} ${addClass ? `${addClass}` : 'mb-8'} `}
+      } ${chooseVariant} ${addClass ? `${addClass}` : 'mb-8'} text-justify`}
     >
       {children}
     </p>
