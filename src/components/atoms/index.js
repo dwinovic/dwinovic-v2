@@ -15,6 +15,7 @@ import FormInput from './FormInput';
 import AnchorText from './AnchorText';
 import NavbarTop from './NavbarTop';
 import TextInlineStyle from './TextInlineStyle';
+export * from './OnlineResumeAtoms';
 
 export {
   Icon,
