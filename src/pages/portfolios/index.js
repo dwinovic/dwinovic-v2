@@ -11,7 +11,6 @@ import {
 import { fetchingData, reqDataHostName } from '../../utils';
 
 const PortfolioPage = ({ projects, tagProjects }) => {
-  console.log(tagProjects);
   return (
     <>
       <Head>
@@ -29,13 +28,13 @@ const PortfolioPage = ({ projects, tagProjects }) => {
 
         <BodyContent>
           <div className="w-full px-8 ">
-            <div className="flex space-x-4 pt-4 justify-center">
+            {/* <div className="flex space-x-4 pt-4 justify-center">
               {tagProjects &&
                 tagProjects.map((tag) => (
                   <TagFilter key={tag.id} tagText={tag.tag_name} />
                 ))}
-            </div>
-            <ProjectSection headingOff>
+            </div> */}
+            <ProjectSection headingOff addClass="-mt-0">
               <div className="flex flex-col  space-y-6 items-center">
                 {projects &&
                   projects.map((project) => (
@@ -48,15 +47,16 @@ const PortfolioPage = ({ projects, tagProjects }) => {
                       }
                       desc={project.desc}
                       title={project.title}
-                      year={project.year}
+                      year={project.created_at}
                       tags={project.tag_projects}
+                      slug={project.slug}
                     />
                   ))}
               </div>
             </ProjectSection>
-            <Footer />
           </div>
         </BodyContent>
+        <Footer />
       </body>
     </>
   );

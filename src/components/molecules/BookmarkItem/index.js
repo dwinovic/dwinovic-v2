@@ -1,8 +1,13 @@
 import React from 'react';
+import { setOnlyDate } from '../../../utils';
 
-const BookmarkItem = ({ title, desc, date, tags, image }) => {
+const BookmarkItem = ({ title, desc, date, tags, image, href }) => {
   return (
-    <div className="flex flex-col bg-black-400 py-5 px-4 rounded-md justify-between">
+    <a
+      target="_blank"
+      href={href}
+      className="flex flex-col bg-black-400 py-5 px-4 rounded-md justify-between hover:opacity-90"
+    >
       <div>
         <h2 className="font-poppins 2xl:text-3xl xl:text-3xl lg:text-2xl md:text-2xlg sm:text-2xl font-bold tracking-wide text-black-100 mb-4">
           {title}
@@ -13,10 +18,10 @@ const BookmarkItem = ({ title, desc, date, tags, image }) => {
       </div>
       <div className="flex">
         <p className="bg-black-300 rounded-full py-0.5 px-2 font-poppins capitalize tracking-wide text-black-600 text-sm w-auto">
-          uploaded : {date}
+          uploaded : {setOnlyDate(date)}
         </p>
       </div>
-    </div>
+    </a>
   );
 };
 

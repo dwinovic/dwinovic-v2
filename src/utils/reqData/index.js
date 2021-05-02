@@ -3,8 +3,8 @@ export const reqDataHostName = (url) => {
 };
 
 export const fetchingData = async (url) => {
-  const reqSkill = await fetch(`${process.env.HOSTNAME}${url}`);
-  const skills = await reqSkill.json();
+  const res = await fetch(`${process.env.HOSTNAME}${url}`);
+  const data = await res.json();
 
-  return skills;
+  return data;
 };

@@ -24,7 +24,7 @@ export default function Home({ skills, projects, blogs }) {
           <div className="w-full px-8">
             <SectionHero />
             <SkillSection data={skills} />
-            <ProjectSection>
+            <ProjectSection withButton>
               <div className="grid 2xl:grid-cols-2 xl:grid-cols-2 gap-4 mt-6">
                 {projects &&
                   projects.map((project) => (
@@ -38,14 +38,15 @@ export default function Home({ skills, projects, blogs }) {
                       desc={project.desc}
                       title={project.title}
                       tags={project.tag_projects}
+                      href={project.slug}
                     />
                   ))}
               </div>
             </ProjectSection>
             <BookmarkSection data={blogs} />
-            <Footer />
           </div>
         </BodyContent>
+        <Footer />
       </div>
     </>
   );

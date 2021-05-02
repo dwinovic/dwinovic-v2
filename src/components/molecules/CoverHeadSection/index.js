@@ -1,12 +1,20 @@
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { reqDataHostName } from '../../../utils';
+import { Heading } from '../../atoms';
 
-const CoverHeadSection = () => {
+const CoverHeadSection = ({ cover, title }) => {
+  const [header, setHeader] = useState('/image/imagecoverhead.jpg');
+
+  useEffect(() => {
+    setHeader(reqDataHostName(cover));
+  }, []);
+
   return (
-    <img
-      src="/image/imagecoverhead.jpg"
-      className=" object-cover h-72 w-full"
-    />
+    <div className="flex justify-center items-center">
+      <Heading text={title} as={1} />
+      <img src={header} className=" object-cover h-72 w-full -z-10" />;
+    </div>
   );
 };
 
