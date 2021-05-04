@@ -4,7 +4,7 @@ import {
   BodyContent,
   ContentStudyCase,
   CoverHeadSection,
-  HeadArticleProject,
+  NavigationPost,
 } from '../../components';
 import { fetchingData } from '../../utils';
 
@@ -23,7 +23,7 @@ const StudyCaseProject = ({ data }) => {
         />
         <BodyContent>
           <div className="w-full px-8 ">
-            <HeadArticleProject />
+            <NavigationPost />
             <ContentStudyCase
               cover={data.image_cover ? data.image_cover.url : null}
               client={data.client}

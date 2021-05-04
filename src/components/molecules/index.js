@@ -11,6 +11,7 @@ import CoverHeadSection from './CoverHeadSection';
 import ContentStudyCase from './ContentStudyCase';
 import OnlineResume from './OnlineResume';
 import BookmarkItem from './BookmarkItem';
+import CertificateGalery from './CertificateGalery';
 
 export {
   Navbar,
@@ -26,4 +27,5 @@ export {
   ContentStudyCase,
   OnlineResume,
   BookmarkItem,
+  CertificateGalery,
 };

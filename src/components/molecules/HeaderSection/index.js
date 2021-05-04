@@ -11,7 +11,7 @@ const HeaderSection = ({
   hover,
 }) => {
   return (
-    <div className="bg-gray-500  flex items-center">
+    <div className="bg-gray-500  flex items-center ">
       <div className="box-border p-10  flex flex-col  items-center justify-center container mx-auto">
         <Heading
           text={heading}

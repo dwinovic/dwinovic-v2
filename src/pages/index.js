@@ -10,8 +10,20 @@ import {
   BodyContent,
 } from '../components';
 import { fetchingData, reqDataHostName } from '../utils';
+import Skeleton from 'react-loading-skeleton';
+import { useEffect, useState } from 'react';
 
-export default function Home({ skills, projects, blogs }) {
+export default function Home({ reqSkills, reqProjects, reqBlogs }) {
+  const [skills, setSkills] = useState([]);
+  const [projects, setProject] = useState([]);
+  const [blogs, setBlogs] = useState([]);
+
+  useEffect(() => {
+    setSkills(reqSkills);
+    setProject(reqProjects);
+    setBlogs(reqBlogs);
+  }, []);
+
   return (
     <>
       <Head>
@@ -24,9 +36,9 @@ export default function Home({ skills, projects, blogs }) {
           <div className="w-full px-8">
             <SectionHero />
             <SkillSection data={skills} />
-            <ProjectSection withButton>
+            <ProjectSection withButton={projects.length > 0 ? true : false}>
               <div className="grid 2xl:grid-cols-2 xl:grid-cols-2 gap-4 mt-6">
-                {projects &&
+                {projects.length > 0 ? (
                   projects.map((project) => (
                     <CardProject
                       key={project.id}
@@ -40,7 +52,13 @@ export default function Home({ skills, projects, blogs }) {
                       tags={project.tag_projects}
                       href={project.slug}
                     />
-                  ))}
+                  ))
+                ) : (
+                  <>
+                    <Skeleton count={5} />
+                    <Skeleton count={5} />
+                  </>
+                )}
               </div>
             </ProjectSection>
             <BookmarkSection data={blogs} />
@@ -53,11 +71,11 @@ export default function Home({ skills, projects, blogs }) {
 }
 
 export async function getStaticProps() {
-  const skills = await fetchingData('/skills');
-  const projects = await fetchingData('/projects');
-  const blogs = await fetchingData('/blogs');
+  const reqSkills = await fetchingData('/skills');
+  const reqProjects = await fetchingData('/projects');
+  const reqBlogs = await fetchingData('/blogs');
 
   return {
-    props: { skills, projects, blogs },
+    props: { reqSkills, reqProjects, reqBlogs },
   };
 }

@@ -1,6 +1,7 @@
 import moment from 'moment';
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
+import Skeleton from 'react-loading-skeleton';
 import {
   BodyContent,
   BookmarkItem,
@@ -11,12 +12,21 @@ import {
 } from '../../components';
 import { fetchingData, reqDataHostName, setDateFull } from '../../utils';
 
-const Bookmarks = ({ blogs, tagBlogs, lastUpdate }) => {
+const Bookmarks = ({ blogs, tagBlogs, sortDesc }) => {
   const [date, setDate] = useState('');
 
-  useEffect(() => {
-    setDate(setDateFull(lastUpdate.create_at));
-  }, []);
+  useEffect(() => {}, []);
+
+  const lastUpdateValue = () => {
+    if (lastUpdate.length > 0) {
+      const lastUpdate = sortDesc[0];
+      setDate(setDateFull(lastUpdate.create_at));
+
+      return `${date}`;
+    } else {
+      return null;
+    }
+  };
 
   return (
     <>
@@ -31,7 +41,7 @@ const Bookmarks = ({ blogs, tagBlogs, lastUpdate }) => {
           <HeaderSection
             heading="The Bookmarks About Software Development And Life"
             desc="Beberapa hal menarik yang saya temui di internet"
-            btnTitle={!lastUpdate ? null : `${date}`}
+            btnTitle={lastUpdateValue}
             btnInfo
           />
           <BodyContent>
@@ -42,9 +52,9 @@ const Bookmarks = ({ blogs, tagBlogs, lastUpdate }) => {
                   <TagFilter tagText={tag.tag_name} key={tag.id} />
                 ))}
             </div> */}
-              <div className="grid 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-4">
-                {blogs &&
-                  blogs.map((blog) => (
+              {blogs.length > 0 ? (
+                <div className="grid 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-4">
+                  {blogs.map((blog) => (
                     <BookmarkItem
                       href={blog.url}
                       title={blog.title}
@@ -53,7 +63,17 @@ const Bookmarks = ({ blogs, tagBlogs, lastUpdate }) => {
                       date={blog.create_at}
                     />
                   ))}
-              </div>
+                </div>
+              ) : (
+                <div className="flex  | 2xl:flex-row xl:flex-row lg:flex-row md:flex-row sm:flex-col iphone:flex-col android:flex-col |2xl:space-x-4 xl:space-x-4 lg:space-x-4 md:space-x-4 2xl:space-y-0 xl:space-y-0 lg:space-y-0 md:space-y-0 | sm:space-y-2 iphone:space-y-2 android:space-y-2 ">
+                  <div className="2xl:w-[50%] xl:w-[50%] lg:w-[50%] md:w-[50%] sm:w-full iphone:w-full android:w-full">
+                    <Skeleton count={5} />
+                  </div>
+                  <div className="2xl:w-[50%] xl:w-[50%] lg:w-[50%] md:w-[50%] sm:w-full iphone:w-full android:w-full">
+                    <Skeleton count={5} />
+                  </div>
+                </div>
+              )}
             </div>
           </BodyContent>
         </div>
@@ -70,8 +90,7 @@ export async function getStaticProps() {
   const blogs = await fetchingData('/blogs');
   const tagBlogs = await fetchingData('/tag-blogs');
   const sortDesc = await fetchingData('/blogs?_sort=create_at:DESC');
-  const lastUpdate = sortDesc[0];
   return {
-    props: { blogs, tagBlogs, lastUpdate },
+    props: { blogs, tagBlogs, sortDesc },
   };
 }

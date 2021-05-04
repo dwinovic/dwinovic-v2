@@ -16,7 +16,7 @@ const Navigation = ({ href, textNavigation, iconNav }) => {
   );
 };
 
-const HeadArticleProject = ({ title }) => {
+const NavigationPost = ({ title }) => {
   return (
     <div className="flex flex items-center bg-white  sticky top-0 py-4 -z-10  justify-around">
       <Navigation iconNav="back" href="/portfolios" textNavigation="Go Back" />
@@ -25,4 +25,4 @@ const HeadArticleProject = ({ title }) => {
   );
 };
 
-export default HeadArticleProject;
+export default NavigationPost;

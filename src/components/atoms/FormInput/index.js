@@ -1,6 +1,14 @@
 import React from 'react';
 
-const index = ({ label, type, name, id, placeholder, typeForm }) => {
+const index = ({
+  label,
+  type,
+  name,
+  id,
+  placeholder,
+  typeForm,
+  ...resProps
+}) => {
   const FormType = () => {
     switch (typeForm) {
       case 'textarea':
@@ -10,6 +18,7 @@ const index = ({ label, type, name, id, placeholder, typeForm }) => {
             id={id}
             name={name}
             placeholder={placeholder}
+            {...resProps}
             className="py-2 px-3 border-2 border-black-300 rounded-md font-poppins text-lg text-black-500 hover:  w-full h-[340px]"
           ></textarea>
         );
@@ -19,6 +28,7 @@ const index = ({ label, type, name, id, placeholder, typeForm }) => {
             type={typeForm}
             id={id}
             name={name}
+            {...resProps}
             placeholder={placeholder}
             className="py-2 px-3 border-2 border-black-300 rounded-md font-poppins text-black-500 hover: w-full"
           />

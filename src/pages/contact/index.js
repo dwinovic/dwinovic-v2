@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { useState } from 'react';
 import {
   Button,
   HeaderSection,
@@ -10,6 +11,21 @@ import {
 } from '../../components';
 
 const Contact = () => {
+  const [form, setForm] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const onSubmit = () => {
+    const data = form;
+    console.log(data);
+  };
+
+  const handleChange = (key, event) => {
+    setForm();
+  };
+
   return (
     <>
       <Head>
@@ -40,6 +56,8 @@ const Contact = () => {
                       name="name"
                       placeholder="Your Name"
                       type="text"
+                      value={form.name}
+                      onChange={(value) => setForm('name', value)}
                     />
                   </div>
                   <div className="android:w-full iphone:w-full sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2 2xl:w-1/2">
@@ -49,6 +67,8 @@ const Contact = () => {
                       name="email"
                       placeholder="Your Email"
                       type="Email"
+                      value={form.email}
+                      onChange={(value) => setForm('email', value)}
                     />
                   </div>
                 </div>
@@ -59,10 +79,13 @@ const Contact = () => {
                     type="textarea"
                     placeholder="Send Message"
                     name="message"
+                    value={form.message}
+                    onChange={(value) => setForm('message', value)}
                   />
                 </div>
                 <div className="w-full bg-red-100">
-                  <Button title="Submit Now" type="fill" />
+                  <Button title="Submit Now" onClick={onSubmit} type="fill" />
+                  {/* <button onClick={onSubmit}>Submit Now</button> */}
                 </div>
               </form>
             </div>

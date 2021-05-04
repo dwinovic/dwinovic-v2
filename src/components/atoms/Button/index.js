@@ -12,6 +12,7 @@ const Button = ({
   href,
   target,
   addClass,
+  onClick,
 }) => {
   const ButtonType = () => {
     if (type === 'fill') {

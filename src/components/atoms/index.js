@@ -9,7 +9,7 @@ import Section from './Section';
 import CardProject from './CardProject';
 import CardPost from './CardPost';
 import TagFilter from './TagFilter';
-import HeadArticleProject from './HeadArticleProject';
+import NavigationPost from './NavigationPost';
 import CardProjectPortfolio from './CardProjectPortfolio';
 import FormInput from './FormInput';
 import AnchorText from './AnchorText';
@@ -29,7 +29,7 @@ export {
   CardProject,
   CardPost,
   TagFilter,
-  HeadArticleProject,
+  NavigationPost,
   CardProjectPortfolio,
   FormInput,
   AnchorText,

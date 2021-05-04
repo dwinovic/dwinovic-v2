@@ -7,6 +7,7 @@ import {
   TextInlineStyle,
 } from '../../atoms';
 import axios from 'axios';
+import Skeleton from 'react-loading-skeleton';
 import { reqDataHostName } from '../../../utils';
 
 const index = ({ data }) => {
@@ -26,7 +27,7 @@ const index = ({ data }) => {
         knowledge and experience.
       </Paragraph>
       <div className="grid 2xl:grid-cols-4 xl:grid-cols-3 lg:grid-cols-2 gap-4 mt-4">
-        {data &&
+        {data.length > 0 ? (
           data.map((skill) => (
             <CardSkill
               key={skill.id}
@@ -34,7 +35,15 @@ const index = ({ data }) => {
               title={skill.skill_name}
               desc={skill.desc}
             />
-          ))}
+          ))
+        ) : (
+          <>
+            <Skeleton count={5} />
+            <Skeleton count={5} />
+            <Skeleton count={5} />
+            <Skeleton count={5} />
+          </>
+        )}
         {!data && <p>Kosong</p>}
       </div>
     </Section>
