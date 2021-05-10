@@ -7,15 +7,17 @@ const BookmarkSection = ({ data }) => {
   return (
     <Section>
       <HeadingSection text="Latest Bookmarks Posts" />
-      {data.length > 0 ? (
+      {typeof data === 'object' ? (
         <div className="overflow-x-scroll w-[100%] h-[580px] relative">
           <div className="mt-6 flex space-x-4 absolute">
             {data.map((blog) => (
               <CardPost
                 href={blog.url}
-                image={reqDataHostName(
-                  blog.image_cover ? blog.image_cover.url : null
-                )}
+                image={
+                  blog.images_cover
+                    ? reqDataHostName(blog.images_cover.url)
+                    : null
+                }
                 title={blog.title}
                 desc={blog.desc}
                 tags={blog.tag_blogs}
@@ -23,15 +25,15 @@ const BookmarkSection = ({ data }) => {
               />
             ))}
           </div>
-          <div className="mt-8 flex justify-center">
-            <Button title="More Posts" yellow href="/bookmarks" />
-          </div>
         </div>
       ) : (
         <div className="mt-6">
           <Skeleton count={6} />
         </div>
       )}
+      <div className="mt-8 flex justify-center">
+        <Button title="More Posts" yellow href="/bookmarks" />
+      </div>
     </Section>
   );
 };

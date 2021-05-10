@@ -9,6 +9,7 @@ const index = () => {
         <h1 className="font-bold font-poppins 2xl:text-7xl xl:text-6xl lg:text-6xl md:text-4xl sm:text-4xl  android:text-4xl iphone:text-4xl text-black-500 mb-4">
           Dwinovic
         </h1>
+        <h2 id="hello">Hello</h2>
         <Paragraph variant={20}>
           <b>Front-end Developers</b> who are passionate about creating
           outstanding web apps or mobile apps. Now the technology stack that I

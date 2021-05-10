@@ -5,9 +5,12 @@ import TagCapsule from '../TagCapsule';
 
 const CardProject = ({ image, desc, title, tags, href }) => {
   const [cover, setCover] = useState('/image/coverskill.jpg');
+  console.log(image);
 
   useEffect(() => {
-    setCover(image);
+    if (image) {
+      setCover(image);
+    }
   }, []);
 
   return (

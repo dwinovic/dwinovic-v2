@@ -13,6 +13,7 @@ import {
 import { fetchingData, reqDataHostName, setDateFull } from '../../utils';
 
 const Bookmarks = ({ blogs, tagBlogs, sortDesc }) => {
+  console.log(sortDesc);
   const [date, setDate] = useState('');
 
   useEffect(() => {}, []);
@@ -20,8 +21,7 @@ const Bookmarks = ({ blogs, tagBlogs, sortDesc }) => {
   const lastUpdateValue = () => {
     if (lastUpdate.length > 0) {
       const lastUpdate = sortDesc[0];
-      setDate(setDateFull(lastUpdate.create_at));
-
+      setDate(setDateFull(lastUpdate.createdAt));
       return `${date}`;
     } else {
       return null;
@@ -89,7 +89,7 @@ export default Bookmarks;
 export async function getStaticProps() {
   const blogs = await fetchingData('/blogs');
   const tagBlogs = await fetchingData('/tag-blogs');
-  const sortDesc = await fetchingData('/blogs?_sort=create_at:DESC');
+  const sortDesc = await fetchingData('/blogs?_sort=createdAt:DESC');
   return {
     props: { blogs, tagBlogs, sortDesc },
   };

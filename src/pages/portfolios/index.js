@@ -43,8 +43,8 @@ const PortfolioPage = ({ projects, tagProjects }) => {
                       <CardProjectPortfolio
                         key={project.id}
                         image={
-                          project.image_cover
-                            ? `${reqDataHostName(project.image_cover.url)}`
+                          project.cover
+                            ? `${reqDataHostName(project.cover.url)}`
                             : null
                         }
                         desc={project.desc}

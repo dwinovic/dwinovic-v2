@@ -1,14 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import { CardSkill } from '..';
-import {
-  HeadingSection,
-  Paragraph,
-  Section,
-  TextInlineStyle,
-} from '../../atoms';
-import axios from 'axios';
+import React from 'react';
 import Skeleton from 'react-loading-skeleton';
+import { CardSkill } from '..';
 import { reqDataHostName } from '../../../utils';
+import { HeadingSection, Paragraph, Section } from '../../atoms';
 
 const index = ({ data }) => {
   return (
@@ -27,12 +21,12 @@ const index = ({ data }) => {
         knowledge and experience.
       </Paragraph>
       <div className="grid 2xl:grid-cols-4 xl:grid-cols-3 lg:grid-cols-2 gap-4 mt-4">
-        {data.length > 0 ? (
+        {typeof data === 'object' ? (
           data.map((skill) => (
             <CardSkill
               key={skill.id}
               icon={skill.icon ? reqDataHostName(skill.icon.url) : null}
-              title={skill.skill_name}
+              title={skill.title}
               desc={skill.desc}
             />
           ))
