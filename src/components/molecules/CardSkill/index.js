@@ -10,13 +10,10 @@ function CardSkill({ icon, title, desc }) {
   }, []);
 
   return (
-    <div className="box-border h-auto w-auto p-4  rounded-lg shadow-md ">
-      <img
-        src={iconLogo}
-        className="2xl:w-[40px] xl:w-[40px] lg:w-[40px] md:w-[40px] sm:w-[36px] iphone:w-[32px] android:w-[32px]"
-      />
+    <div className="skill-item">
+      <img src={iconLogo} className="logo-skill" />
       <Heading text={title} as={5} addClass="my-2" />
-      <Paragraph variant={14} addClass="tracking-wide text-justify">
+      <Paragraph variant={14} addClass="skill-paragraph">
         {desc}
       </Paragraph>
     </div>

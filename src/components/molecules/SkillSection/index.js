@@ -7,10 +7,7 @@ import { HeadingSection, Paragraph, Section } from '../../atoms';
 const index = ({ data }) => {
   return (
     <Section id="home-portfolio">
-      <HeadingSection
-        text="What I Do"
-        addClass="2xl:text-7xl xl:text-6xl lg:text-5xl md:text-4xl sm:text-4xl"
-      />
+      <HeadingSection text="What I Do" />
       <Paragraph variant={20} addClass="mt-4">
         I'm a self-taught programmer focusing on front-end developer specialists
         who have a deep passion and interest in web and mobile application
@@ -20,7 +17,7 @@ const index = ({ data }) => {
         creation of the best products. <br /> A learner who is always eager for
         knowledge and experience.
       </Paragraph>
-      <div className="grid 2xl:grid-cols-4 xl:grid-cols-3 lg:grid-cols-2 gap-4 mt-4">
+      <div className="skill-items">
         {typeof data === 'object' ? (
           data.map((skill) => (
             <CardSkill

@@ -1,7 +1,87 @@
-.navbar-bg {
-  @apply bg-gray-200;
-}
-
+// START = NAVBAR
 .navbar-right {
   @apply xl:py-8 xl:px-4 py-5  px-5 bg-gray-200 rounded-xl border-2 border-black-100 shadow-sm sticky top-8;
+  h1 {
+    @apply text-2xl font-bold font-poppins text-black-500 text-center mb-4;
+  }
+  .desc {
+    @apply font-poppins text-center mb-4 text-sm text-black-500 tracking-wide;
+  }
+  .icon-wrapper {
+    @apply flex justify-center space-x-4 mb-4;
+  }
 }
+
+.navbar-top {
+  @apply android:block iphone:block md:block sm:block lg:hidden lg:hidden xl:hidden 2xl:hidden;
+  .navbar-theme {
+    @apply z-10 inset-x-0;
+  }
+  .light {
+    @apply bg-white fixed;
+  }
+  .dark {
+    @apply bg-gray-500 fixed top-0;
+  }
+  .navbar-wrapper {
+    @apply py-4 px-8 flex justify-between;
+    .btn-toogle {
+      @apply sm:block md:hidden;
+    }
+    .navbar-top-wrapper {
+      @apply android:hidden iphone:hidden sm:hidden md:block;
+    }
+  }
+}
+// END = NAVBAR
+
+// START = Body Content Component
+.body-content-breakpoint {
+  @apply sm:container md:container lg:container xl:container 2xl:container sm:mx-auto md:mx-auto lg:mx-auto xl:mx-auto 2xl:mx-auto pt-8 flex relative;
+
+  .navbar-content-breakpoint {
+    @apply android:hidden iphone:hidden md:hidden sm:hidden lg:w-72 lg:block xl:block 2xl:inline;
+  }
+}
+// END = Body Content Component
+
+// START = HomePage Component
+.main-content {
+  @apply w-full px-8;
+}
+// END = HomePage Component
+
+// START = Section Hero Component
+.hero {
+  @apply flex android:flex-col-reverse iphone:flex-col-reverse 2xl:flex-row xl:flex-row lg:flex-row md:flex-row;
+}
+.content-wrapper {
+  @apply flex flex-col w-7/12  justify-center android:w-full iphone:w-full sm:w-full;
+  h1 {
+    &.heading-hero {
+      @apply font-bold font-poppins 2xl:text-7xl xl:text-6xl lg:text-6xl md:text-4xl sm:text-4xl  android:text-4xl iphone:text-4xl text-black-500 mb-4;
+    }
+  }
+}
+.hero-profile-wrapper {
+  @apply flex items-center justify-center w-5/12 android:w-full iphone:w-full sm:w-full md:w-[50%] lg:w-[60%] xl:w-[60%] 2xl:w-[60%];
+  .avatar {
+    @apply android:w-[80%] iphone:w-[80%] sm:w-[60%] md:w-full lg:w-full xl:w-full 2xl:w-full;
+  }
+}
+// END = Section Hero Component
+
+// START = Skill Section Component
+.skill-items {
+  @apply grid 2xl:grid-cols-4 xl:grid-cols-3 lg:grid-cols-2 gap-4 mt-4;
+  .skill-item {
+    @apply box-border h-auto w-auto p-4  rounded-lg shadow-md;
+    .logo-skill {
+      @apply 2xl:w-[40px] xl:w-[40px] lg:w-[40px] md:w-[40px] sm:w-[36px] iphone:w-[32px] android:w-[32px];
+    }
+    .skill-paragraph {
+      @apply tracking-wide text-justify;
+    }
+  }
+}
+// END = Skill Section Component

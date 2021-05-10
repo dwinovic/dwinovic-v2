@@ -10,13 +10,13 @@ const NavbarTop = ({ dark, light }) => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="android:block iphone:block md:block sm:block lg:hidden lg:hidden xl:hidden 2xl:hidden ">
+    <div className="navbar-top">
       <div
         className={` ${
           light ? 'bg-white fixed' : 'bg-gray-500 fixed top-0'
         } z-10 inset-x-0 ${open ? 'rounded-br-2xl rounded-bl-2xl' : ''}`}
       >
-        <div className="py-4 px-8 flex justify-between">
+        <div className="navbar-wrapper">
           <Link href="/">
             <a>
               <h1
@@ -30,12 +30,12 @@ const NavbarTop = ({ dark, light }) => {
               </h1>
             </a>
           </Link>
-          <div className="sm:block md:hidden">
+          <div className="btn-toogle">
             <button onClick={() => setOpen(!open)}>
               <Icon icon={`${light ? 'burger' : 'burger-light'}`} />
             </button>
           </div>
-          <div className="android:hidden iphone:hidden sm:hidden md:block">
+          <div className="navbar-top-wrapper">
             <ul className="flex space-x-4">
               <li>
                 <AnchorText dark={dark ? true : false} href="/">

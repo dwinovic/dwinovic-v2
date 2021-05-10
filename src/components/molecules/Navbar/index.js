@@ -6,14 +6,12 @@ import Link from 'next/link';
 const index = () => {
   return (
     <div className="navbar-right">
-      <h1 className="text-2xl font-bold font-poppins text-black-500 text-center mb-4">
-        Dwinovic
-      </h1>
-      <p className="font-poppins text-center mb-4 text-sm text-black-500 tracking-wide">
+      <h1>Dwinovic</h1>
+      <p className="desc">
         Front-end developers currently create great web or mobile applications
         using the React environment
       </p>
-      <div className="flex justify-center space-x-4 mb-4">
+      <div className="icon-wrapper">
         <Icon
           icon="linkedin"
           hover

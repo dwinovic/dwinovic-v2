@@ -26,7 +26,7 @@ export default function Home({ projects, skills, blogs }) {
       <div>
         <NavbarTop light />
         <BodyContent>
-          <div className="w-full px-8">
+          <div className="main-content">
             <SectionHero />
             <SkillSection data={skills} />
             <ProjectSection>

@@ -3,13 +3,10 @@ import { Button, Heading, Paragraph, Section } from '../../atoms';
 
 const index = () => {
   return (
-    <Section addClass="flex android:flex-col-reverse iphone:flex-col-reverse 2xl:flex-row xl:flex-row lg:flex-row md:flex-row">
-      <div className="flex flex-col w-7/12  justify-center android:w-full iphone:w-full sm:w-full">
+    <Section addClass="hero">
+      <div className="content-wrapper">
         <Heading as={3} text="Hi I'am" />
-        <h1 className="font-bold font-poppins 2xl:text-7xl xl:text-6xl lg:text-6xl md:text-4xl sm:text-4xl  android:text-4xl iphone:text-4xl text-black-500 mb-4">
-          Dwinovic
-        </h1>
-        <h2 id="hello">Hello</h2>
+        <h1 className="heading-hero">Dwinovic</h1>
         <Paragraph variant={20}>
           <b>Front-end Developers</b> who are passionate about creating
           outstanding web apps or mobile apps. Now the technology stack that I
@@ -29,11 +26,8 @@ const index = () => {
           <Button title="View Resume" href="/resume" />
         </div>
       </div>
-      <div className="flex items-center justify-center w-5/12 android:w-full iphone:w-full sm:w-full md:w-[50%] lg:w-[60%] xl:w-[60%] 2xl:w-[60%]">
-        <img
-          src="/image/hero-profile.png"
-          className="android:w-[80%] iphone:w-[80%] sm:w-[60%] md:w-full lg:w-full xl:w-full 2xl:w-full"
-        />
+      <div className="hero-profile-wrapper">
+        <img src="/image/hero-profile.png" className="avatar" />
       </div>
     </Section>
   );
