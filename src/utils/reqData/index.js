@@ -17,3 +17,7 @@ export const fetchingData = async (url) => {
 
   return data;
 };
+
+export const postData = async (url, post) => {
+  return await Axios.post(`http://localhost:1337${url}`, post);
+};

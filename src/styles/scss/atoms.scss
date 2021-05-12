@@ -1,0 +1,31 @@
+// START = Atoms Card Project Component
+.home-card-project {
+  @apply flex 2xl:flex-row xl:flex-row lg:flex-col flex-col bg-yellow-400 rounded-md shadow-md hover:opacity-90;
+  &.wrapper {
+    @apply overflow-hidden 2xl:h-[250px] xl:h-[250px] lg:h-auto md:h-auto sm:h-auto iphone:h-auto android:h-auto;
+  }
+  .padding {
+    @apply 2xl:px-5 2xl:py-2 xl:px-5 xl:py-2 lg:px-4 lg:py-2 md:px-4 md:py-2 px-3 py-2;
+  }
+  .cover {
+    @apply rounded-tl-md rounded-bl-md lg:rounded-tr-md md:rounded-tr-md 2xl:w-full 2xl:h-full xl:w-full xl:h-full object-cover h-60 w-full;
+  }
+  .card-project-overflow {
+    @apply overflow-hidden 2xl:h-[120px] xl:h-[100px] lg:h-[120px] md:h-[120px] sm:h-[100px] iphone:h-[100px] android:h-[100px];
+  }
+}
+// END = Atoms Card Project Component
+
+// START = Atoms Card Skill Item Component
+#home-portfolio {
+}
+// END = Atoms Card Skill Item Component
+
+// START = Atoms Card Blog Component
+.card-blog {
+  @apply hover:opacity-90 bg-black-400 w-80 rounded-lg shadow-xl;
+  .content-overflow {
+    @apply overflow-hidden h-[150px];
+  }
+}
+// END = Atoms Card Blog Component

@@ -8,7 +8,7 @@ const BookmarkSection = ({ data }) => {
     <Section>
       <HeadingSection text="Latest Bookmarks Posts" />
       {typeof data === 'object' ? (
-        <div className="overflow-x-scroll w-[100%] h-[580px] relative">
+        <div className="overflow-x-scroll w-[100%] h-[610px] relative">
           <div className="mt-6 flex space-x-4 absolute">
             {data.map((blog) => (
               <CardPost

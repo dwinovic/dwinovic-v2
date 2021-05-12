@@ -13,13 +13,14 @@ import {
 import { fetchingData, reqDataHostName, setDateFull } from '../../utils';
 
 const Bookmarks = ({ blogs, tagBlogs, sortDesc }) => {
-  console.log(sortDesc);
-  const [date, setDate] = useState('');
+  const [date, setDate] = useState([]);
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    lastUpdateValue();
+  }, []);
 
   const lastUpdateValue = () => {
-    if (lastUpdate.length > 0) {
+    if (sortDesc.length > 0) {
       const lastUpdate = sortDesc[0];
       setDate(setDateFull(lastUpdate.createdAt));
       return `${date}`;
@@ -41,7 +42,7 @@ const Bookmarks = ({ blogs, tagBlogs, sortDesc }) => {
           <HeaderSection
             heading="The Bookmarks About Software Development And Life"
             desc="Beberapa hal menarik yang saya temui di internet"
-            btnTitle={lastUpdateValue}
+            btnTitle={date}
             btnInfo
           />
           <BodyContent>
@@ -60,7 +61,7 @@ const Bookmarks = ({ blogs, tagBlogs, sortDesc }) => {
                       title={blog.title}
                       desc={blog.desc}
                       tags={blog.tag_blogs}
-                      date={blog.create_at}
+                      date={blog.createdAt}
                     />
                   ))}
                 </div>

@@ -1,3 +1,6 @@
+// Atoms Styling
+@import './scss/atoms.scss';
+@import './scss/components.scss';
 // START = NAVBAR
 .navbar-right {
   @apply xl:py-8 xl:px-4 py-5  px-5 bg-gray-200 rounded-xl border-2 border-black-100 shadow-sm sticky top-8;
@@ -71,17 +74,17 @@
 }
 // END = Section Hero Component
 
-// START = Skill Section Component
-.skill-items {
-  @apply grid 2xl:grid-cols-4 xl:grid-cols-3 lg:grid-cols-2 gap-4 mt-4;
-  .skill-item {
-    @apply box-border h-auto w-auto p-4  rounded-lg shadow-md;
-    .logo-skill {
-      @apply 2xl:w-[40px] xl:w-[40px] lg:w-[40px] md:w-[40px] sm:w-[36px] iphone:w-[32px] android:w-[32px];
-    }
-    .skill-paragraph {
-      @apply tracking-wide text-justify;
+// START = CardProjectPortfolio
+.portfolio-cardproject {
+  @apply bg-yellow-400 rounded-md shadow-md hover:opacity-90;
+  &.responsive {
+    @apply android:w-full iphone:w-full sm:w-full md:w-full lg:w-[90%] xl:w-[90%] 2xl:w-[90%] h-auto;
+  }
+  .cover {
+    @apply rounded-tl-md rounded-tr-md  box-border h-96 object-cover;
+    &.cover-responsive {
+      @apply android:hidden iphone:inline iphone:w-full md:inline md:w-full lg:w-full xl:w-full 2xl:w-full;
     }
   }
 }
-// END = Skill Section Component
+// END = CardProjectPortfolio

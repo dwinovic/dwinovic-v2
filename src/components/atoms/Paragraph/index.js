@@ -19,7 +19,9 @@ const Paragraph = ({ text, children, variant, addClass, color }) => {
     <p
       className={`font-lato ${
         color === 'white' ? `${colors.white}` : `${colors.dark}`
-      } ${chooseVariant} ${addClass ? `${addClass}` : 'mb-8'} text-justify`}
+      } ${chooseVariant} ${
+        addClass ? `${addClass} mb-8` : 'mb-8'
+      } text-justify`}
     >
       {children}
     </p>

@@ -3,9 +3,9 @@ import { Heading, HeadingSectionResume, Text } from '../../atoms';
 
 const Skills = () => {
   return (
-    <div className="mt-8">
+    <div className="portfolio mt-8">
       <Heading text="Skills" as={3} />
-      <div className="flex | 2xl:space-x-40 xl:space-x-36 lg:space-x-32 md:space-x-24 sm:space-x-16 android:space-x-10 iphone:space-x-8 |">
+      <div className="skill-items">
         <div>
           <HeadingSectionResume Heading="Technical" />
           <Text>

@@ -18,24 +18,24 @@ const StudyCaseProject = ({ data }) => {
       </Head>
       <body>
         <CoverHeadSection
-          cover={data.image_cover ? data.image_cover.url : null}
-          title={data.title}
+          cover={data.cover ? data.cover.url : null}
+          tags={data.tag_projects}
         />
         <BodyContent>
           <div className="w-full px-8 ">
-            <NavigationPost />
+            <NavigationPost title={data.title} />
             <ContentStudyCase
-              cover={data.image_cover ? data.image_cover.url : null}
+              cover={data.cover ? data.cover.url : null}
               client={data.client}
               year={data.created_at}
-              coverName={data.image_cover ? data.image_cover.name : null}
+              coverName={data.cover ? data.cover.name : null}
             />
             {/* DUMMY */}
             <ContentStudyCase
-              cover={data.image_cover ? data.image_cover.url : null}
+              cover={data.cover ? data.cover.url : null}
               client={data.client}
               year={data.created_at}
-              coverName={data.image_cover ? data.image_cover.name : null}
+              coverName={data.cover ? data.cover.name : null}
             />
           </div>
         </BodyContent>

@@ -69,7 +69,7 @@ const HeaderSection = ({
             title={btnTitle}
             yellow
             btnIcon
-            icon="download"
+            icon={btnTitle === 'Hire Me' ? 'send-dark' : 'download'}
           />
         )}
       </div>

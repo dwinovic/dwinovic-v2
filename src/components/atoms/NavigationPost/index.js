@@ -20,6 +20,7 @@ const NavigationPost = ({ title }) => {
   return (
     <div className="flex flex items-center bg-white  sticky top-0 py-4 -z-10  justify-around">
       <Navigation iconNav="back" href="/portfolios" textNavigation="Go Back" />
+      <h1 className="title-project">{title}</h1>
       <Navigation iconNav="link" textNavigation="Visit Website" />
     </div>
   );

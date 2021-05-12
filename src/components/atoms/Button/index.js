@@ -23,6 +23,7 @@ const Button = ({
               ? 'bg-yellow-400 hover:bg-yellow-500'
               : 'bg-black-400 hover:bg-black-500'
           }`}
+          onClick={onClick}
         >
           <p
             className={`font-poppins font-base ${
@@ -92,13 +93,14 @@ const Button = ({
           </a>
         </Link>
       )}
-      {!target && (
+      {!target && href && (
         <Link href={`${href}`}>
           <a>
             <IsBtn />
           </a>
         </Link>
       )}
+      {onClick && <IsBtn />}
     </>
   );
 };

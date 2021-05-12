@@ -11,7 +11,7 @@ import {
 } from '../../components';
 import { fetchingData, reqDataHostName } from '../../utils';
 
-const PortfolioPage = ({ projects, tagProjects }) => {
+const PortfolioPage = ({ projects, tagProjects, errorMessage }) => {
   return (
     <>
       <Head>
@@ -73,10 +73,16 @@ const PortfolioPage = ({ projects, tagProjects }) => {
 export default PortfolioPage;
 
 export async function getStaticProps() {
-  const projects = await fetchingData('/projects');
-  const tagProjects = await fetchingData('/tag-projects');
-
-  return {
-    props: { projects, tagProjects },
-  };
+  try {
+    const projects = await fetchingData('/projects');
+    const tagProjects = await fetchingData('/tag-projects');
+    return {
+      props: { projects, tagProjects },
+    };
+  } catch (error) {
+    const errorMessage = error;
+    return {
+      props: { errorMessage },
+    };
+  }
 }

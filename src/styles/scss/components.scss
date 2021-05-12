@@ -1,0 +1,114 @@
+// START = Home Skill Section Component
+.skill-items {
+  @apply grid 2xl:grid-cols-4 xl:grid-cols-3 lg:grid-cols-2 gap-4 mt-4;
+  .skill-item {
+    @apply box-border h-auto w-auto p-4  rounded-lg shadow-md;
+    .logo-skill {
+      @apply 2xl:w-[40px] xl:w-[40px] lg:w-[40px] md:w-[40px] sm:w-[36px] iphone:w-[32px] android:w-[32px];
+    }
+    .skill-paragraph {
+      @apply tracking-wide text-justify;
+    }
+  }
+}
+// END = Home Skill Item Component
+
+// START = OnlineResume Component
+.online-resume {
+  @apply w-[80%] bg-black-100 rounded-xl  p-8;
+  .header {
+    @apply flex mb-4 justify-between;
+    &.responsive {
+      @apply 2xl:space-x-0 xl:space-x-0 lg:space-x-0 md:space-x-0 sm:space-y-4 iphone:space-y-4 android:space-y-4;
+    }
+    &.direction {
+      @apply 2xl:flex-row xl:flex-row lg:flex-row md:flex-row sm:flex-col iphone:flex-col android:flex-col;
+    }
+    .jobs {
+      @apply font-poppins text-black-400 pt-2;
+      &.font {
+        @apply font-semibold 2xl:text-2xl xl:text-2xl lg:text-xl md:text-xl sm:text-base iphone:text-base android:text-base;
+      }
+    }
+    .wrapper-contact-info {
+      @apply flex android:hidden iphone:hidden md:inline-flex lg:inline-flex xl:inline-flex 2xl:inline-flex;
+      .contacts {
+        @apply w-full ml-8 flex flex-col space-y-1;
+      }
+    }
+    .small-container {
+      @apply android:inline-flex flex-col space-y-2 iphone:inline-flex  md:hidden lg:hidden xl:hidden 2xl:hidden;
+    }
+  }
+  .profile-desc {
+    @apply flex my-6;
+    &.space {
+      @apply 2xl:space-x-4 xl:space-x-4 lg:space-x-4 md:space-x-4 sm:space-y-4 iphone:space-y-4 android:space-y-4;
+    }
+    &.responsive {
+      @apply 2xl:flex-row xl:flex-row lg:flex-row md:flex-row sm:flex-col iphone:flex-col android:flex-col;
+    }
+    .avatar {
+      @apply 2xl:w-48 2xl:h-48 xl:w-44 xl:h-44 lg:w-40 lg:h-40 md:w-40 md:h-40 sm:w-[50%] sm:h-[50%]  iphone:w-[50%] iphone:h-[50%] android:w-[50%] android:h-[50%];
+    }
+  }
+  .portfolio {
+    .skill-items {
+      @apply flex 2xl:space-x-40 xl:space-x-36 lg:space-x-32 md:space-x-24 sm:space-x-16 android:space-x-10 iphone:space-x-8;
+    }
+  }
+  .interest {
+    @apply flex mt-4 2xl:space-x-40 xl:space-x-36 lg:space-x-32 md:space-x-24 sm:space-x-16 android:space-x-10 iphone:space-x-8;
+  }
+  // START = Online Footer
+  .footer-portfolio {
+    @apply android:hidden iphone:hidden sm:hidden md:inline lg:inline xl:inline 2xl:inline;
+    .large {
+      @apply pt-8 flex justify-center md:space-x-2 lg:space-x-4 xl:space-x-6 2xl:space-x-8;
+    }
+  }
+  .small {
+    @apply android:inline iphone:inline sm:inline md:hidden lg:hidden xl:hidden 2xl:hidden;
+    .space {
+      @apply flex justify-center space-x-10 pt-8;
+    }
+  }
+  // END = Online Footer
+}
+// END = OnlineResume Component
+
+// START = Project Showcase Component
+.title-project {
+  @apply font-poppins font-bold text-black-500 2xl:text-4xl xl:text-3xl lg:text-2xl md:text-2xl sm:text-xl iphone:text-xl android:text-lg;
+}
+// END = Project Showcase Component
+
+// START = Contact Message Component
+.body-contact {
+  @apply flex flex-col justify-between h-[100vh];
+  .main-content {
+    @apply h-16 bg-blue-200 2xl:hidden xl:hidden lg:hidden md:block sm:block;
+  }
+  .contact {
+    @apply w-full px-8 flex;
+    .form-contact {
+      @apply flex flex-col space-y-4 w-[80%] mx-auto;
+      .sender-identity {
+        @apply flex android:flex-col iphone:flex-col sm:flex-col md:flex-row lg:flex-row xl:flex-row 2xl:flex-row;
+        &.space-y {
+          @apply android:space-y-4 iphone:space-y-4 md:space-y-0 lg:space-y-0 xl:space-y-0 2xl:space-y-0;
+        }
+        &.space-x {
+          @apply md:space-x-4 lg:space-x-4 xl:space-x-4 2xl:space-x-4;
+        }
+        .wrapper-username {
+          @apply android:w-full iphone:w-full sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2 2xl:w-1/2;
+        }
+        .wrapper-email {
+          @apply android:w-full iphone:w-full sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2 2xl:w-1/2;
+        }
+      }
+    }
+  }
+}
+// END = Contact Message Component

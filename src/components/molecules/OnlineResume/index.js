@@ -11,7 +11,7 @@ import WorkExperience from './WorkExperience';
 
 const OnlineResume = () => {
   return (
-    <div className="w-[80%] bg-black-100 rounded-xl  p-8">
+    <div className="online-resume">
       <Header />
       <Divider horizontal />
       <ProfileDesc />
