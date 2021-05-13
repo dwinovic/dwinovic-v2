@@ -10,8 +10,8 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="py-6 flex justify-center">
-      <p className="2xl:text-xl xl:text-xl lg:text-lg md:text-lg sm:text-base iphone:text-base android:text-base font-poppins font-semibold text-black-200 tracking-wider text-center">
+    <footer className="pb-6 pt-16 flex justify-center bg-black-100">
+      <p className="2xl:text-xl xl:text-xl lg:text-lg md:text-lg sm:text-base iphone:text-base android:text-base font-poppins font-semibold text-black-300 tracking-wider text-center">
         Made with love by Me | Since Feb 2021 Until {date}
       </p>
     </footer>

@@ -23,7 +23,7 @@ const PortfolioPage = ({ projects, tagProjects, errorMessage }) => {
           <NavbarTop dark />
           <div className="h-16 bg-blue-200 2xl:hidden xl:hidden lg:hidden md:block sm:block"></div>
           <HeaderSection
-            heading="Portfolio"
+            heading="Project and portfolios"
             desc="Welcome to my online portfolio. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. I'm taking on freelance work at the moment. Want some help building your software?"
             btnTitle="Hire Me"
           />
@@ -38,7 +38,7 @@ const PortfolioPage = ({ projects, tagProjects, errorMessage }) => {
             </div> */}
               <ProjectSection headingOff addClass="-mt-0">
                 <div className="flex flex-col  space-y-6 items-center">
-                  {projects.length > 0 ? (
+                  {typeof projects === 'object' ? (
                     projects.map((project) => (
                       <CardProjectPortfolio
                         key={project.id}

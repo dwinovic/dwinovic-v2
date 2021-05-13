@@ -8,8 +8,8 @@ const index = () => {
     <div className="navbar-right">
       <h1>Dwinovic</h1>
       <p className="desc">
-        Front-end developers currently create great web or mobile applications
-        using the React environment
+        Front-end developer who is also a React Engineer. Be able to make dream
+        come true with React JS or React Native
       </p>
       <div className="icon-wrapper">
         <Icon

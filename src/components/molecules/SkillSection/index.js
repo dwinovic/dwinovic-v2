@@ -12,10 +12,10 @@ const index = ({ data }) => {
         I'm a self-taught programmer focusing on front-end developer specialists
         who have a deep passion and interest in web and mobile application
         development, especially on the client-side. The technology stack that I
-        use right now is JavaScript programming with the React Environment. Have
-        an understanding of doing the UI UX Design process to support the
-        creation of the best products. <br /> A learner who is always eager for
-        knowledge and experience.
+        use right now is JavaScript programming language with the React
+        Environment. Have an understanding of doing the UI UX Design process to
+        support the creation of the best products. <br /> A learner who is
+        always eager for knowledge and experience.
       </Paragraph>
       <div className="skill-items">
         {typeof data === 'object' ? (
