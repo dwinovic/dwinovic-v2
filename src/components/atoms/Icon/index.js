@@ -6,10 +6,10 @@ const Icon = ({ icon, href, hover, circle, size }) => {
   const [typeIcon, settypeIcon] = useState('');
 
   useEffect(() => {
-    iconCheck();
+    chooseIcon();
   }, []);
 
-  const iconCheck = () => {
+  const chooseIcon = () => {
     switch (icon) {
       case 'linkedin':
         return settypeIcon('ic-linkedin.svg');
@@ -74,13 +74,9 @@ const Icon = ({ icon, href, hover, circle, size }) => {
     light: 'hover:bg-yellow-300',
   };
 
-  return (
-    <div>
-      <a
-        target={href ? '_blank' : null}
-        href={href}
-        className="flex items-center justify-center"
-      >
+  const IconType = () => {
+    if (!href) {
+      return (
         <Image
           src={`/icons/${typeIcon}`}
           height={size ? `${size}` : 30}
@@ -89,9 +85,29 @@ const Icon = ({ icon, href, hover, circle, size }) => {
             circle ? 'rounded-full' : null
           }  scale-100 `}
         />
-      </a>
-    </div>
-  );
+      );
+    }
+    return (
+      <div>
+        <a
+          target={href ? '_blank' : null}
+          href={href}
+          className="flex items-center justify-center"
+        >
+          <Image
+            src={`/icons/${typeIcon}`}
+            height={size ? `${size}` : 30}
+            width={size ? `${size}` : 30}
+            className={`${hover ? `${hoverVariant.light}` : null} ${
+              circle ? 'rounded-full' : null
+            }  scale-100 `}
+          />
+        </a>
+      </div>
+    );
+  };
+
+  return <IconType />;
 };
 
 Icon.propTypes = {

@@ -3,12 +3,12 @@ import React from 'react';
 const TagCapsule = ({ textTag, disable }) => {
   const className = {
     default: {
-      button: `py-0.5 px-1.5 bg-yellow-200 rounded-lg inline-block`,
-      text: `text-black-400 font-poppins text-sm`,
+      button: 'capsule-default',
+      text: 'text-default',
     },
     disable: {
-      button: `py-0.5 px-1.5 bg-black-300 rounded-lg inline-block`,
-      text: `text-white font-poppins text-sm`,
+      button: 'capsule-disable',
+      text: 'text-disable',
     },
   };
 
@@ -18,13 +18,13 @@ const TagCapsule = ({ textTag, disable }) => {
         disable ? `${className.disable.button}` : `${className.default.button}`
       }`}
     >
-      <a
+      <p
         className={` ${
           disable ? `${className.disable.text}` : `${className.default.text}`
         }`}
       >
         {textTag}
-      </a>
+      </p>
     </div>
   );
 };

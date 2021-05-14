@@ -20,7 +20,9 @@ const CardPost = ({ title, desc, date, tags, image, href }) => {
         <Heading text={title} as={5} color="text-white" />
         <div className="flex space-x-2 my-4">
           {tags &&
-            tags.map((tag) => <TagCapsule textTag={tag.tag_names} disable />)}
+            tags.map((tag) => (
+              <TagCapsule key={tag.id} textTag={tag.tag_names} disable />
+            ))}
         </div>
         <Paragraph color="white" addClass={'content-overflow'}>
           {desc}

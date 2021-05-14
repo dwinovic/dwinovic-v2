@@ -18,20 +18,10 @@ const Button = ({
     if (type === 'fill') {
       return (
         <button
-          className={` w-full items-center py-2 px-2 rounded-lg ${
-            yellow
-              ? 'bg-yellow-400 hover:bg-yellow-500'
-              : 'bg-black-400 hover:bg-black-500'
-          }`}
+          className={`btn-fill ${yellow ? 'yellow' : 'gray'}`}
           onClick={onClick}
         >
-          <p
-            className={`font-poppins font-base ${
-              yellow
-                ? 'text-black-400 hover:text-black-500'
-                : 'text-white hover:text-white'
-            }`}
-          >
+          <p className={`font-poppins font-base ${yellow ? 'gray' : 'white'}`}>
             {title}
           </p>
         </button>
@@ -39,20 +29,8 @@ const Button = ({
     }
     // Button Content
     return (
-      <button
-        className={`flex space-x-2 items-center py-2 px-2 rounded-lg ${
-          yellow
-            ? 'bg-yellow-400 hover:bg-yellow-500'
-            : 'bg-black-400 hover:bg-black-500'
-        }`}
-      >
-        <p
-          className={`font-poppins font-base ${
-            yellow
-              ? 'text-black-400 hover:text-black-500'
-              : 'text-white hover:text-white'
-          }`}
-        >
+      <button className={`btn-default ${yellow ? 'yellow' : 'gray'}`}>
+        <p className={`font-poppins font-base ${yellow ? 'gray' : 'white'}`}>
           {title}
         </p>
       </button>
@@ -62,20 +40,10 @@ const Button = ({
     if (btnIcon) {
       return (
         <button
-          className={`flex space-x-2 items-center ${addClass} py-2 px-2 rounded-lg ${
-            yellow
-              ? 'bg-yellow-400 hover:bg-yellow-500'
-              : 'bg-black-400 hover:bg-black-500'
-          }`}
+          className={`btn-icon  ${addClass} ${yellow ? 'yellow' : 'gray'}`}
         >
           <Icon icon={icon} size={18} />
-          <p
-            className={`font-poppins font-base ${
-              yellow
-                ? 'text-black-400 hover:text-black-500'
-                : 'text-white hover:text-white'
-            }`}
-          >
+          <p className={`font-poppins font-base ${yellow ? 'gray' : 'white'}`}>
             {title}
           </p>
         </button>

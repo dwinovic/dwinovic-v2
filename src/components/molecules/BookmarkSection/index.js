@@ -12,6 +12,7 @@ const BookmarkSection = ({ data }) => {
           <div className="mt-6 flex space-x-4 absolute">
             {data.map((blog) => (
               <CardPost
+                key={blog.id}
                 href={blog.url}
                 image={
                   blog.images_cover

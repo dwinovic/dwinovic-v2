@@ -1,7 +1,5 @@
 import Head from 'next/head';
-import { useEffect } from 'react';
 import Skeleton from 'react-loading-skeleton';
-import { useDispatch, useSelector } from 'react-redux';
 import {
   BodyContent,
   BookmarkSection,
