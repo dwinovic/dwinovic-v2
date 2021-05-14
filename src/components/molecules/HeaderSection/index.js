@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Heading, Icon, Paragraph } from '../../atoms';
+import PropTypes from 'prop-types';
 
 const HeaderSection = ({
   btnTitle,
@@ -7,6 +8,7 @@ const HeaderSection = ({
   desc,
   btnInfo,
   btnSosmed,
+  href,
   icon,
   hover,
 }) => {
@@ -65,6 +67,7 @@ const HeaderSection = ({
             btnIcon
             target
             icon={btnTitle === 'Hire Me' ? 'send-dark' : 'download'}
+            href={href}
           />
         )}
       </div>
@@ -73,3 +76,13 @@ const HeaderSection = ({
 };
 
 export default HeaderSection;
+
+HeaderSection.propTypes = {
+  btnTitle: PropTypes.string,
+  heading: PropTypes.string,
+  desc: PropTypes.string,
+  btnInfo: PropTypes.string,
+  btnSosmed: PropTypes.string,
+  icon: PropTypes.string,
+  hover: PropTypes.string,
+};

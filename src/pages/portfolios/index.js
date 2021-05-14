@@ -7,7 +7,6 @@ import {
   HeaderSection,
   NavbarTop,
   ProjectSection,
-  TagFilter,
 } from '../../components';
 import { fetchingData, reqDataHostName } from '../../utils';
 
@@ -18,7 +17,7 @@ const PortfolioPage = ({ projects, tagProjects, errorMessage }) => {
         <title>Dwinovic | Portfolios </title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <body className="h-screen flex flex-col justify-between">
+      <div className="h-screen flex flex-col justify-between">
         <div>
           <NavbarTop dark />
           <div className="h-16 bg-blue-200 2xl:hidden xl:hidden lg:hidden md:block sm:block"></div>
@@ -26,6 +25,7 @@ const PortfolioPage = ({ projects, tagProjects, errorMessage }) => {
             heading="Project and portfolios"
             desc="Welcome to my online portfolio. Here are some of the projects that I have completed. With pleasure, I'm open if there is an offer to collaborate on a project with me. Come to know me more closely, please contact me."
             btnTitle="Hire Me"
+            href="https://www.linkedin.com/in/dwinovic/"
           />
 
           <BodyContent>
@@ -65,7 +65,7 @@ const PortfolioPage = ({ projects, tagProjects, errorMessage }) => {
           </BodyContent>
         </div>
         <Footer />
-      </body>
+      </div>
     </>
   );
 };
