@@ -78,10 +78,10 @@ const HeaderSection = ({
 export default HeaderSection;
 
 HeaderSection.propTypes = {
-  btnTitle: PropTypes.string,
+  btnTitle: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
   heading: PropTypes.string,
   desc: PropTypes.string,
-  btnInfo: PropTypes.string,
+  btnInfo: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   btnSosmed: PropTypes.string,
   icon: PropTypes.string,
   hover: PropTypes.string,

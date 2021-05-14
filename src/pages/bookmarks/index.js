@@ -1,4 +1,3 @@
-import moment from 'moment';
 import Head from 'next/head';
 import { useEffect, useState } from 'react';
 import Skeleton from 'react-loading-skeleton';
@@ -8,13 +7,10 @@ import {
   Footer,
   HeaderSection,
   NavbarTop,
-  TagFilter,
 } from '../../components';
-import { fetchingData, reqDataHostName, setDateFull } from '../../utils';
+import { fetchingData, setDateFull } from '../../utils';
 
 const Bookmarks = ({ blogs, tagBlogs, sortDesc }) => {
-  console.log(blogs);
-
   const [date, setDate] = useState([]);
 
   useEffect(() => {
@@ -37,7 +33,7 @@ const Bookmarks = ({ blogs, tagBlogs, sortDesc }) => {
         <title>Dwinovic | Bookmarks </title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <body className="bookmarks-body">
+      <div className="bookmarks-body">
         <div>
           <NavbarTop dark />
           <div className="space"></div>
@@ -59,6 +55,7 @@ const Bookmarks = ({ blogs, tagBlogs, sortDesc }) => {
                 <div className="content-wrapper">
                   {blogs.map((blog) => (
                     <BookmarkItem
+                      key={blog.id}
                       href={blog.url}
                       title={blog.title}
                       desc={blog.desc}
@@ -82,7 +79,7 @@ const Bookmarks = ({ blogs, tagBlogs, sortDesc }) => {
         </div>
 
         <Footer />
-      </body>
+      </div>
     </>
   );
 };
