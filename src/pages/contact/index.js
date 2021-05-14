@@ -50,7 +50,7 @@ const Contact = () => {
         <title>Dwinovic | Portfolios </title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <body className="body-contact" id="contactpage">
+      <div className="body-contact" id="contactpage">
         <div>
           <NavbarTop dark />
           <div className="main-content"></div>
@@ -100,7 +100,7 @@ const Contact = () => {
           </BodyContent>
         </div>
         <Footer />
-      </body>
+      </div>
       <ToastContainer
         position="top-center"
         autoClose={5000}

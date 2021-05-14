@@ -82,7 +82,7 @@ HeaderSection.propTypes = {
   heading: PropTypes.string,
   desc: PropTypes.string,
   btnInfo: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
-  btnSosmed: PropTypes.string,
+  btnSosmed: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   icon: PropTypes.string,
   hover: PropTypes.string,
 };

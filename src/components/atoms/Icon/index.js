@@ -113,7 +113,7 @@ const Icon = ({ icon, href, hover, circle, size }) => {
 Icon.propTypes = {
   icon: PropTypes.string,
   href: PropTypes.string,
-  hover: PropTypes.bool,
+  hover: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   circle: PropTypes.bool,
   size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
