@@ -13,6 +13,7 @@ import {
 import { fetchingData, reqDataHostName } from '../utils';
 
 export default function Home({ projects, skills, blogs }) {
+  console.info('Hi!!');
   return (
     <>
       <Head>

@@ -100,7 +100,7 @@
     @apply h-16 bg-blue-200 2xl:hidden xl:hidden lg:hidden md:block sm:block;
   }
   .contact {
-    @apply w-full px-8 flex;
+    @apply w-full px-8 flex pb-16;
     .form-contact {
       @apply flex flex-col space-y-4 w-[80%] mx-auto;
       .sender-identity {

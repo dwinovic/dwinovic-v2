@@ -10,14 +10,13 @@ import {
 import { fetchingData } from '../../utils';
 
 const StudyCaseProject = ({ data }) => {
-  console.log(data);
   return (
     <>
       <Head>
         <title>Dwinovic Project | {data.title}</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <body>
+      <div>
         <CoverHeadSection
           cover={data.cover_heading ? data.cover_heading.url : null}
           tags={data.tag_projects}
@@ -38,7 +37,7 @@ const StudyCaseProject = ({ data }) => {
           </div>
         </BodyContent>
         <Footer />
-      </body>
+      </div>
     </>
   );
 };
