@@ -22,7 +22,7 @@ export default function Home({ projects, skills, blogs }) {
       </Head>
       <div>
         <NavbarTop light />
-        <BodyContent>
+        <BodyContent fadeTop>
           <div className="main-content">
             <SectionHero />
             <SkillSection data={skills} />

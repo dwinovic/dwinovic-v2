@@ -2,6 +2,7 @@ import React from 'react';
 import { Projects } from '..';
 import { Button, Heading, HeadingSection, Section } from '../../atoms';
 import PropTypes from 'prop-types';
+import Zoom from 'react-reveal/Zoom';
 
 function ProjectSection({ headingOff, children, addClass, withButton }) {
   const Heading = () => {
@@ -11,16 +12,18 @@ function ProjectSection({ headingOff, children, addClass, withButton }) {
     return <HeadingSection text="Featured Project" />;
   };
   return (
-    <Section addClass={addClass}>
-      <Heading />
-      {children}
-      {/* <Projects /> */}
-      {withButton && (
-        <div className="mt-8 flex justify-center">
-          <Button title="More Project" yellow href="/portfolios" />
-        </div>
-      )}
-    </Section>
+    <Zoom>
+      <Section addClass={addClass}>
+        <Heading />
+        {children}
+        {/* <Projects /> */}
+        {withButton && (
+          <div className="mt-8 flex justify-center">
+            <Button title="More Project" yellow href="/portfolios" />
+          </div>
+        )}
+      </Section>
+    </Zoom>
   );
 }
 

@@ -5,6 +5,8 @@ import Head from 'next/head';
 import NextNprogress from 'nextjs-progressbar';
 import { Provider } from 'react-redux';
 import store from '../redux/store';
+import config from 'react-reveal/globals';
+config({ ssrFadeout: true });
 
 function MyApp({ Component, pageProps }) {
   return (

@@ -2,11 +2,15 @@ import React from 'react';
 import { Button, CardPost, HeadingSection, Section } from '../../atoms';
 import { reqDataHostName } from '../../../utils';
 import Skeleton from 'react-loading-skeleton';
+import Fade from 'react-reveal/Fade';
 
 const BookmarkSection = ({ data }) => {
   return (
     <Section>
-      <HeadingSection text="Latest Bookmarks Posts" />
+      <Fade top>
+        <HeadingSection text="Latest Bookmarks Posts" />
+      </Fade>
+
       {typeof data === 'object' ? (
         <div className="overflow-x-scroll w-[100%] h-[610px] relative">
           <div className="mt-6 flex space-x-4 absolute">
