@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 
 const CoverHeadSection = ({ cover, title }) => {
   console.log(cover);
-  const [header, setHeader] = useState('/image/imagecoverhead.jpg');
+  const [header, setHeader] = useState('/gif/loading.gif');
 
   useEffect(() => {
     setHeader(reqDataHostName(cover));

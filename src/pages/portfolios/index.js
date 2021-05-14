@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { useEffect, useState } from 'react';
 import Skeleton from 'react-loading-skeleton';
 import {
   BodyContent,

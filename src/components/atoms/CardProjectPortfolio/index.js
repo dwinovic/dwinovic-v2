@@ -5,7 +5,7 @@ import { setOnlyDate } from '../../../utils';
 import TagCapsule from '../TagCapsule';
 
 const CardProjectPortfolio = ({ image, desc, title, tags, year, slug }) => {
-  const [cover, setCover] = useState('/image/coverskill.jpg');
+  const [cover, setCover] = useState('/gif/loading.gif');
   const [dateProject, setDateProject] = useState('');
 
   useEffect(() => {

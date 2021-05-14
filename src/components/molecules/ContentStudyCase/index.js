@@ -12,7 +12,7 @@ const ContentStudyCase = ({
   tags,
   desc,
 }) => {
-  const [image, setImage] = useState('/image/imagecoverhead.jpg');
+  const [image, setImage] = useState('/gif/loading.gif');
   const [dateProject, setDateProject] = useState();
   useEffect(() => {
     setImage(reqDataHostName(cover));

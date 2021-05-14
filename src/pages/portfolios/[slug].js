@@ -24,7 +24,6 @@ const StudyCaseProject = ({ data }) => {
         <BodyContent>
           <div className="content-project">
             <NavigationPost title={data.title} href={data.link_url} />
-            {/* DUMMY */}
             <ContentStudyCase
               cover={data.cover ? data.cover.url : null}
               coverName={data.cover ? data.cover.name : null}

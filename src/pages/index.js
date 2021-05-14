@@ -17,7 +17,7 @@ export default function Home({ projects, skills, blogs }) {
   return (
     <>
       <Head>
-        <title>Dwinovic | Software Engineer</title>
+        <title>Dwinovic | React Developer</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <div>
