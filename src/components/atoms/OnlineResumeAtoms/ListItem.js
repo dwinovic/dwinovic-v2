@@ -6,7 +6,7 @@ const ListItem = ({ size, icon, text, hover, href }) => {
   return (
     <a href={href} target="_blank">
       <li className="flex items-center space-x-2">
-        <Icon icon={icon} hover={hover} size={size} circle href={href} />
+        <Icon icon={icon} hover={hover} size={size} circle />
         <p className="font-poppins text-black-400 text-md">{text}</p>
       </li>
     </a>

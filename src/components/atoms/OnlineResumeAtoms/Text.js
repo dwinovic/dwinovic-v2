@@ -10,5 +10,5 @@ const Text = ({ children }) => {
 export default Text;
 
 Text.propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 };

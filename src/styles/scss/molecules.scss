@@ -55,10 +55,20 @@
   .portfolio {
     .skill-items {
       @apply flex 2xl:space-x-40 xl:space-x-36 lg:space-x-32 md:space-x-24 sm:space-x-16 android:space-x-10 iphone:space-x-8;
+      ul {
+        &.list {
+          @apply font-lato text-lg text-black-400 text-justify;
+        }
+      }
     }
   }
   .interest {
     @apply flex mt-4 2xl:space-x-40 xl:space-x-36 lg:space-x-32 md:space-x-24 sm:space-x-16 android:space-x-10 iphone:space-x-8;
+    ul {
+      &.list {
+        @apply font-lato text-lg text-black-400 text-justify;
+      }
+    }
   }
   // START = Online Footer
   .footer-portfolio {

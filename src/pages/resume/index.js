@@ -1,12 +1,10 @@
 import Head from 'next/head';
-import { useEffect, useState } from 'react';
 import {
+  BodyContent,
   Footer,
   HeaderSection,
-  Navbar,
-  OnlineResume,
   NavbarTop,
-  BodyContent,
+  OnlineResume,
 } from '../../components';
 import { fetchingData } from '../../utils';
 
@@ -19,13 +17,14 @@ const Resume = ({ profile, experiences, projects, techSkills, proSkills }) => {
         <title>Dwinovic | Online Resume </title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <body>
+      <div>
         <NavbarTop dark />
         <div className="h-4 bg-blue-200 2xl:hidden xl:hidden lg:hidden md:block sm:block"></div>
         <HeaderSection
           heading="Online Resume"
           btnIcon
           btnTitle="Download Resume"
+          href="https://fonts.google.com/"
         />
         <BodyContent>
           <div className="flex w-full justify-center mb-8">
@@ -33,7 +32,7 @@ const Resume = ({ profile, experiences, projects, techSkills, proSkills }) => {
           </div>
         </BodyContent>
         <Footer />
-      </body>
+      </div>
     </>
   );
 };

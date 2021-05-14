@@ -6,15 +6,13 @@ const InterestAndLanguage = () => {
     <div className="interest">
       <div>
         <Heading text="Interest" as={3} />
-        <Text>
-          <ul>
-            <li>Travelling</li>
-            <li>Cycling</li>
-            <li>Swimming</li>
-            <li>Learn something new</li>
-            <li>Make more money</li>
-          </ul>
-        </Text>
+        <ul className="list">
+          <li>Travelling</li>
+          <li>Cycling</li>
+          <li>Swimming</li>
+          <li>Learn something new</li>
+          <li>Make more money</li>
+        </ul>
       </div>
       <div>
         <Heading text="Languages" as={3} />

@@ -115,7 +115,7 @@ Icon.propTypes = {
   href: PropTypes.string,
   hover: PropTypes.bool,
   circle: PropTypes.bool,
-  size: PropTypes.number,
+  size: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 export default Icon;
