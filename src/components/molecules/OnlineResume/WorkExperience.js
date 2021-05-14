@@ -1,25 +1,25 @@
 import React from 'react';
 import { Heading, HeadingSectionResume, Text } from '../../atoms';
+import PropTypes from 'prop-types';
 
-const WorkExperience = () => {
+const WorkExperience = ({ title, subTitle, desc, data }) => {
   return (
     <div className="mt-8">
       <Heading text="Work Experience" as={3} />
-      <HeadingSectionResume
-        Heading="Front End Developer"
-        desc="Freelance"
-        year="2020 - 2021"
-      />
-      <Text>
-        Summarise your career here. You can make a PDF version of your resume
-        using our free Sketch template here. Donec quam felis, ultricies nec,
-        pellentesque eu. Lorem ipsum dolor sit amet, consectetuer adipiscing
-        elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-        penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec
-        quam felis,
-      </Text>
+      {data.map((item) => (
+        <div key={item.id}>
+          <HeadingSectionResume heading={item.title} desc={item.sub_title} />
+          <Text>{item.desc}</Text>
+        </div>
+      ))}
     </div>
   );
 };
 
 export default WorkExperience;
+
+WorkExperience.propTypes = {
+  title: PropTypes.string,
+  subTitle: PropTypes.string,
+  desc: PropTypes.string,
+};

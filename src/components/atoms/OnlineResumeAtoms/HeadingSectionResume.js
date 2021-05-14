@@ -2,11 +2,11 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Divider from '../Divider';
 
-const HeadingSectionResume = ({ Heading, desc, year, divider }) => {
+const HeadingSectionResume = ({ heading, desc, year, divider }) => {
   return (
     <div className="flex justify-between mb-2">
       <h4 className="font-poppins text-xl font-semibold text-black-400 tracking-wide">
-        {Heading}
+        {heading}
       </h4>
       <div className="flex space-x-2 items-center">
         <p className="font-lato text-md text-black-400">{desc}</p>

@@ -63,6 +63,7 @@ const HeaderSection = ({
             title={btnTitle}
             yellow
             btnIcon
+            target
             icon={btnTitle === 'Hire Me' ? 'send-dark' : 'download'}
           />
         )}

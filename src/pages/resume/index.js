@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import { useEffect, useState } from 'react';
 import {
   Footer,
   HeaderSection,
@@ -7,8 +8,11 @@ import {
   NavbarTop,
   BodyContent,
 } from '../../components';
+import { fetchingData } from '../../utils';
 
-const Resume = () => {
+const Resume = ({ profile, experiences, projects, techSkills, proSkills }) => {
+  const data = { profile, experiences, projects, techSkills, proSkills };
+
   return (
     <>
       <Head>
@@ -18,10 +22,14 @@ const Resume = () => {
       <body>
         <NavbarTop dark />
         <div className="h-4 bg-blue-200 2xl:hidden xl:hidden lg:hidden md:block sm:block"></div>
-        <HeaderSection heading="Online Resume" btnTitle="Download as a PDF" />
+        <HeaderSection
+          heading="Online Resume"
+          btnIcon
+          btnTitle="Download Resume"
+        />
         <BodyContent>
           <div className="flex w-full justify-center mb-8">
-            <OnlineResume />
+            <OnlineResume data={data} />
           </div>
         </BodyContent>
         <Footer />
@@ -31,3 +39,25 @@ const Resume = () => {
 };
 
 export default Resume;
+
+export async function getStaticProps() {
+  const profile = await fetchingData('/resume-profiles');
+  const experiences = await fetchingData('/resume-experiences');
+  const projects = await fetchingData('/resume-projects');
+  const techSkills = await fetchingData(
+    '/resume-skills?_sort=tags:DESC&_where[0][tags]=technicals'
+  );
+  const proSkills = await fetchingData(
+    '/resume-skills?_sort=tags:DESC&_where[0][tags]=professionals'
+  );
+
+  return {
+    props: {
+      profile,
+      experiences,
+      projects,
+      techSkills,
+      proSkills,
+    },
+  };
+}

@@ -1,26 +1,21 @@
 import React from 'react';
 import { Text } from '../../atoms';
+import PropTypes from 'prop-types';
 
-const ProfileDesc = () => {
+const ProfileDesc = ({ profile, desc, alt }) => {
   return (
     <div className="profile-desc space justify-center items-center responsive">
-      <img src="/image/profile.png" className="avatar" />
+      <img src={profile} className="avatar" alt={alt} />
 
-      <Text>
-        Summarise your career here. You can make a PDF version of your resume
-        using our free Sketch template here. Donec quam felis, ultricies nec,
-        pellentesque eu. Lorem ipsum dolor sit amet, consectetuer adipiscing
-        elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-        penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec
-        quam felis, Summarise your career here. You can make a PDF version of
-        your resume using our free Sketch template here. Donec quam felis,
-        ultricies nec, pellentesque eu. Lorem ipsum dolor sit amet, consectetuer
-        adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum
-        sociis natoque penatibus et magnis dis parturient montes, nascetur
-        ridiculus mus. Donec quam felis,
-      </Text>
+      <Text>{desc}</Text>
     </div>
   );
 };
 
 export default ProfileDesc;
+
+ProfileDesc.propTypes = {
+  profile: PropTypes.string,
+  desc: PropTypes.string,
+  alt: PropTypes.string,
+};

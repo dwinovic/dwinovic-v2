@@ -1,34 +1,29 @@
 import React from 'react';
 import { Heading, HeadingSectionResume, Text } from '../../atoms';
 
-const Skills = () => {
+const Skills = ({ techSkills, proSkills }) => {
+  console.log('skill', proSkills);
   return (
     <div className="portfolio mt-8">
       <Heading text="Skills" as={3} />
       <div className="skill-items">
         <div>
-          <HeadingSectionResume Heading="Technical" />
+          <HeadingSectionResume heading="Technical" />
           <Text>
             <ul>
-              <li>HTML5</li>
-              <li>CSS3</li>
-              <li>JavaScript</li>
-              <li>TypeScript</li>
-              <li>React JS</li>
-              <li>React Native</li>
-              <li>Tailwind CSS</li>
-              <li>Bootstrap 4</li>
+              {techSkills.map((item) => (
+                <li key={item.id}>{item.title}</li>
+              ))}
             </ul>
           </Text>
         </div>
         <div>
-          <HeadingSectionResume Heading="Professional" />
+          <HeadingSectionResume heading="Professional" />
           <Text>
             <ul>
-              <li>Communication</li>
-              <li>Team player</li>
-              <li>Problem Solver</li>
-              <li>Good Time Management</li>
+              {proSkills.map((item) => (
+                <li key={item.id}>{item.title}</li>
+              ))}
             </ul>
           </Text>
         </div>

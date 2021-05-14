@@ -180,3 +180,33 @@
   }
 }
 // END = ContentStudyCase Component
+
+// START = Bookmarks Page
+.bookmarks-body {
+  @apply h-screen flex flex-col justify-between;
+  .space {
+    @apply h-16 bg-blue-200 2xl:hidden xl:hidden lg:hidden md:block sm:block;
+  }
+  .main-content {
+    @apply w-full px-8 mb-16;
+  }
+  .content-wrapper {
+    @apply grid 2xl:grid-cols-3 xl:grid-cols-3 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 gap-4;
+  }
+  .delay-wrapper {
+    @apply flex;
+    &.direction {
+      @apply 2xl:flex-row xl:flex-row lg:flex-row md:flex-row sm:flex-col iphone:flex-col android:flex-col;
+    }
+    &.space-x {
+      @apply 2xl:space-x-4 xl:space-x-4 lg:space-x-4 md:space-x-4;
+    }
+    &.space-y {
+      @apply 2xl:space-y-0 xl:space-y-0 lg:space-y-0 md:space-y-0 sm:space-y-2 iphone:space-y-2 android:space-y-2;
+    }
+    .delay-item {
+      @apply 2xl:w-[50%] xl:w-[50%] lg:w-[50%] md:w-[50%] sm:w-full iphone:w-full android:w-full;
+    }
+  }
+}
+// END = Bookmarks Page

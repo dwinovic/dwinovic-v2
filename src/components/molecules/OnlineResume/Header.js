@@ -13,29 +13,19 @@ const Header = () => {
         <Divider vertical />
         <ul className="contacts">
           <ListItem
-            text="62899876165"
+            text="+62 8787 1469 919"
             size={24}
             icon="wa"
-            href="https://www.instagram.com/dwinovic_/"
+            href="http://wa.me/622087871469919"
           />
-          <ListItem
-            text="dwinovic@gmail.com"
-            size={24}
-            icon="email"
-            href="https://www.instagram.com/dwinovic_/"
-          />
+          <ListItem text="cahyo.dwinov@gmail.com" size={24} icon="email" />
           <ListItem
             text="www.dwinovic.com"
             size={24}
             icon="web"
-            href="https://www.instagram.com/dwinovic_/"
+            href="https://www.dwinovic.com"
           />
-          <ListItem
-            text="Madiun, Indonesia"
-            size={24}
-            icon="location"
-            href="https://www.instagram.com/dwinovic_/"
-          />
+          <ListItem text="Madiun, Indonesia" size={24} icon="location" />
         </ul>
       </div>
       {/* END: Display Wide */}

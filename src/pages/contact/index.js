@@ -56,7 +56,7 @@ const Contact = () => {
           <div className="main-content"></div>
           <HeaderSection
             heading="Get In Touch"
-            desc="Interested in hiring me for your project or just want to say hi? You can fill in the contact form below or send me an email to simon.doe@yourwebsite.com"
+            desc="Interested in hiring me for your project or just want to say hi? You can fill in the contact form below or send me an email to cahyo.dwinov@gmail.com"
             btnTitle="Hire Me"
             btnSosmed
           />
