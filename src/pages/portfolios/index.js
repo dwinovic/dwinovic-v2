@@ -24,7 +24,7 @@ const PortfolioPage = ({ projects, tagProjects, errorMessage }) => {
           <div className="h-16 bg-blue-200 2xl:hidden xl:hidden lg:hidden md:block sm:block"></div>
           <HeaderSection
             heading="Project and portfolios"
-            desc="Welcome to my online portfolio. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. I'm taking on freelance work at the moment. Want some help building your software?"
+            desc="Welcome to my online portfolio. Here are some of the projects that I have completed. With pleasure, I'm open if there is an offer to collaborate on a project with me. Come to know me more closely, please contact me."
             btnTitle="Hire Me"
           />
 
@@ -47,9 +47,9 @@ const PortfolioPage = ({ projects, tagProjects, errorMessage }) => {
                             ? `${reqDataHostName(project.cover.url)}`
                             : null
                         }
-                        desc={project.desc}
+                        desc={project.desc_intro}
                         title={project.title}
-                        year={project.created_at}
+                        year={project.projectDate}
                         tags={project.tag_projects}
                         slug={project.slug}
                       />

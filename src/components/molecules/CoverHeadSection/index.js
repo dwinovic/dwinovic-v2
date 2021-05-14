@@ -13,15 +13,9 @@ const CoverHeadSection = ({ cover, title }) => {
   }, []);
 
   return (
-    <div
-      className={`flex justify-center items-center ${
-        !cover ? 'bg-black-400 py-16' : ''
-      }`}
-    >
+    <div className={`cover-head-section ${!cover ? 'bg-black-400 py-16' : ''}`}>
       {/* <Heading text={title} as={1} color="text-white uppercase" /> */}
-      {cover && (
-        <img src={header} className="object-cover h-80 w-full -z-10 relative" />
-      )}
+      {cover && <img src={header} className="cover" />}
     </div>
   );
 };

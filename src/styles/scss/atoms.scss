@@ -29,3 +29,15 @@
   }
 }
 // END = Atoms Card Blog Component
+
+// START = Atoms NavigationPost Component
+.navigation-post {
+  @apply flex flex items-center bg-white  sticky top-0 py-4   justify-around;
+  .nav-items {
+    @apply flex space-x-2  items-center;
+    .text {
+      @apply font-poppins  text-black-400 tracking-wide hover:text-yellow-600;
+    }
+  }
+}
+// END = Atoms NavigationPost Component

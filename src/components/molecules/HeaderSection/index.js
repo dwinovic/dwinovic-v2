@@ -11,32 +11,26 @@ const HeaderSection = ({
   hover,
 }) => {
   return (
-    <div className="bg-gray-500  flex items-center ">
-      <div className="box-border p-10  flex flex-col  items-center justify-center container mx-auto">
+    <div className="header-section-component">
+      <div className="header-wrapper">
         <Heading
           text={heading}
           as={1}
           color="text-white text-center"
-          addClass="uppercase tracking-wide"
+          addClass="heading"
         />
         {desc && (
-          <Paragraph
-            color="white"
-            addClass="text-center tracking-wide mt-2"
-            variant={16}
-          >
+          <Paragraph color="white" addClass="paragraph" variant={20}>
             {desc}
           </Paragraph>
         )}
         {btnInfo && (
-          <div className="bg-yellow-600 py-0.5 px-4 mt-6 rounded-full">
-            <p className="font-poppins tracking-wide text-black-600">
-              {btnTitle}
-            </p>
+          <div className="btn-info-wrapper">
+            <p className="btn-info-text">{btnTitle}</p>
           </div>
         )}
         {btnSosmed && (
-          <div className="flex space-x-4 mt-6">
+          <div className="btn-sosmed-wrapper">
             <Icon
               icon="linkedin-light"
               hover="dark"

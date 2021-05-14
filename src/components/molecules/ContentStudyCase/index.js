@@ -1,53 +1,49 @@
 import React, { useEffect, useState } from 'react';
-import { reqDataHostName, setOnlyDate } from '../../../utils';
+import { reqDataHostName, setMonthYear } from '../../../utils';
 import { Heading, Paragraph } from '../../atoms';
+import TagCapsule from '../../atoms/TagCapsule';
 
-const ContentStudyCase = ({ cover, coverName, client, year }) => {
+const ContentStudyCase = ({
+  cover,
+  coverName,
+  client,
+  year,
+  descIntro,
+  tags,
+  desc,
+}) => {
   const [image, setImage] = useState('/image/imagecoverhead.jpg');
   const [dateProject, setDateProject] = useState();
-
   useEffect(() => {
     setImage(reqDataHostName(cover));
-    setDateProject(setOnlyDate(year));
+    setDateProject(setMonthYear(year));
   }, []);
   return (
-    <div className="mt-4">
+    <div className="content-study-case">
+      <ul className="project-info">
+        {client && <li className="client">Client : {client}</li>}
+        <li className="date">Date Project: {dateProject}</li>
+      </ul>
+      <div className="tags-category">
+        <p>Category:</p>
+        <div className="tags-wrapper">
+          {tags &&
+            tags.map((tag) => (
+              <TagCapsule key={tag.id} textTag={tag.tag_names} />
+            ))}
+        </div>
+      </div>
+      <Paragraph variant={20} fontFamily="font-poppins" addClass="my-4">
+        {descIntro}
+      </Paragraph>
       <div>
-        <img src={image} className="w-full" />
+        <img src={image} className="cover" />
         <p className="pt-4 text-center font-lato text-black-400 italic tracking-wide">
           {coverName}
         </p>
       </div>
-
-      <ul className="">
-        <li className="list-none font-poppins text-black-500 text-md">
-          Client : {client}
-        </li>
-        <li className="list-none font-poppins text-black-500 text-md">
-          Year: {dateProject}
-        </li>
-      </ul>
-
-      <Paragraph>
-        This project is a redesign and redevelop of Jala’s old website company
-        profile. Jala is an IoT startup in Yogyakarta, Indonesia who provides
-        solutions to help farmers understand the farm condition better in a
-        real-time way for preventive actions towards the risk of farming.
-        Currently, they have 2 products, the device that can detect water
-        condition and a web app that integrated to the device so the farm owner
-        can see their farm condition and eventually will have a better plan to
-        get successful harvest.
-      </Paragraph>
-      <Heading text="The Problems" as={4} />
-      <Paragraph>
-        This project is a redesign and redevelop of Jala’s old website company
-        profile. Jala is an IoT startup in Yogyakarta, Indonesia who provides
-        solutions to help farmers understand the farm condition better in a
-        real-time way for preventive actions towards the risk of farming.
-        Currently, they have 2 products, the device that can detect water
-        condition and a web app that integrated to the device so the farm owner
-        can see their farm condition and eventually will have a better plan to
-        get successful harvest.
+      <Paragraph variant={20} fontFamily="font-poppins" addClass="my-4">
+        {desc}
       </Paragraph>
     </div>
   );

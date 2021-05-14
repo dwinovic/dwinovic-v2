@@ -17,7 +17,7 @@ const CardProjectPortfolio = ({ image, desc, title, tags, year, slug }) => {
     <Link href={`/portfolios/${slug}`}>
       <a className="portfolio-cardproject responsive">
         <img src={cover} alt="skill" className="cover cover-responsive" />
-        <div className="p-4">
+        <div className="py-4 px-6">
           <Heading text={title} as={3} />
           <div className="flex space-x-2 mb my-3.5">
             {tags &&
@@ -25,9 +25,11 @@ const CardProjectPortfolio = ({ image, desc, title, tags, year, slug }) => {
                 <TagCapsule key={tag.id} textTag={tag.tag_names} disable />
               ))}
           </div>
-          <Paragraph addClass="text-justify">{desc}</Paragraph>
+          <Paragraph addClass="text-justify" variant={20}>
+            {desc}
+          </Paragraph>
           <div className="block h-8"></div>
-          <p className="text-sm font-poppins text-black-300">{dateProject}</p>
+          <p className="text-md font-poppins text-black-300">{dateProject}</p>
         </div>
       </a>
     </Link>

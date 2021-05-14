@@ -1,9 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const Paragraph = ({ text, children, variant, addClass, color }) => {
+const Paragraph = ({
+  text,
+  children,
+  variant,
+  addClass,
+  color,
+  fontFamily,
+}) => {
   const colors = {
-    dark: 'text-black-400',
+    dark: 'text-black-500',
     white: 'text-white',
   };
   const textVariant = {
@@ -17,11 +24,9 @@ const Paragraph = ({ text, children, variant, addClass, color }) => {
 
   return (
     <p
-      className={`font-lato ${
+      className={`${fontFamily ? `${fontFamily}` : 'font-lato'} ${
         color === 'white' ? `${colors.white}` : `${colors.dark}`
-      } ${chooseVariant} ${
-        addClass ? `${addClass} mb-8` : 'mb-8'
-      } text-justify`}
+      } ${chooseVariant} ${addClass ? `${addClass}` : 'mb-8'} text-justify`}
     >
       {children}
     </p>

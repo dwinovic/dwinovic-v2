@@ -4,6 +4,7 @@ import {
   BodyContent,
   ContentStudyCase,
   CoverHeadSection,
+  Footer,
   NavigationPost,
 } from '../../components';
 import { fetchingData } from '../../utils';
@@ -18,27 +19,25 @@ const StudyCaseProject = ({ data }) => {
       </Head>
       <body>
         <CoverHeadSection
-          cover={data.cover ? data.cover.url : null}
+          cover={data.cover_heading ? data.cover_heading.url : null}
           tags={data.tag_projects}
         />
         <BodyContent>
-          <div className="w-full px-8 ">
-            <NavigationPost title={data.title} />
-            <ContentStudyCase
-              cover={data.cover ? data.cover.url : null}
-              client={data.client}
-              year={data.created_at}
-              coverName={data.cover ? data.cover.name : null}
-            />
+          <div className="content-project">
+            <NavigationPost title={data.title} href={data.link_url} />
             {/* DUMMY */}
             <ContentStudyCase
               cover={data.cover ? data.cover.url : null}
-              client={data.client}
-              year={data.created_at}
               coverName={data.cover ? data.cover.name : null}
+              client={data.client}
+              year={data.projectDate}
+              descIntro={data.desc_intro}
+              desc={data.desc}
+              tags={data.tag_projects}
             />
           </div>
         </BodyContent>
+        <Footer />
       </body>
     </>
   );
