@@ -13,8 +13,11 @@ import {
 import { postData } from '../../utils';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Image from 'next/image';
 
 const Contact = () => {
+  const [showLoader, setShowLoader] = useState(false);
+
   const {
     register,
     handleSubmit,
@@ -22,10 +25,14 @@ const Contact = () => {
   } = useForm();
 
   const onSubmit = async (data) => {
+    setShowLoader(true);
+
     const dataMessage = data;
     const postMessage = await postData('/messages', dataMessage)
       .then((res) => {
         const content = res.data;
+        setShowLoader(false);
+
         toast.success('Your message has been delivered', {
           position: 'top-center',
           autoClose: 5000,
@@ -37,11 +44,20 @@ const Contact = () => {
         });
       })
       .catch((err) => {
+        setShowLoader(false);
         const error = err.message;
         return error;
       });
 
     return postMessage;
+  };
+
+  const Loader = () => {
+    return (
+      <div className="absolute  inset-0 flex items-center justify-center">
+        <Image src="/gif/loader.gif" height={225} width={225} />
+      </div>
+    );
   };
 
   return (
@@ -65,6 +81,7 @@ const Contact = () => {
               <form className="form-contact" onSubmit={handleSubmit(onSubmit)}>
                 <div className="sender-identity space-y space-x">
                   <div className="wrapper-username">
+                    {showLoader && <Loader />}
                     <FormInput
                       placeholder="Your Name"
                       type="text"

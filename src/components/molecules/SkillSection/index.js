@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import Skeleton from 'react-loading-skeleton';
-import { CardSkill } from '..';
-import { reqDataHostName } from '../../../utils';
-import { HeadingSection, Paragraph, Section } from '../../atoms';
 import Fade from 'react-reveal/Fade';
 import Zoom from 'react-reveal/Zoom';
+import { CardSkill } from '..';
+import { HeadingSection, Paragraph, Section } from '../../atoms';
 
 const index = ({ data }) => {
   const [showSkills, setShowSkills] = useState(false);
@@ -19,7 +18,7 @@ const index = ({ data }) => {
     return data.map((skill) => (
       <CardSkill
         key={skill.id}
-        icon={skill.icon ? reqDataHostName(skill.icon.url) : null}
+        icon={skill.icon ? skill.icon.url : null}
         title={skill.title}
         desc={skill.desc}
       />

@@ -11,7 +11,7 @@ import {
   SectionHero,
   SkillSection,
 } from '../components';
-import { fetchingData, reqDataHostName } from '../utils';
+import { fetchingData } from '../utils';
 
 export default function Home({ projects, skills, blogs }) {
   const [showProjects, setShowProjects] = useState(false);
@@ -25,11 +25,12 @@ export default function Home({ projects, skills, blogs }) {
     return projects.map((project) => (
       <CardProject
         key={project.id}
-        image={project.cover ? `${reqDataHostName(project.cover.url)}` : null}
+        image={project.cover ? `${project.cover.url}` : null}
         desc={project.desc}
         title={project.title}
         tags={project.tag_projects}
         href={project.slug}
+        alt={project.alternativeText}
       />
     ));
   };

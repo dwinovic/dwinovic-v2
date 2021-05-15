@@ -3,8 +3,8 @@ import React, { useEffect, useState } from 'react';
 import { Heading, Paragraph } from '..';
 import TagCapsule from '../TagCapsule';
 
-const CardProject = ({ image, desc, title, tags, href }) => {
-  const [cover, setCover] = useState('/image/coverskill.jpg');
+const CardProject = ({ image, desc, title, tags, href, alternativeText }) => {
+  const [cover, setCover] = useState('/gif/loading.gif');
 
   useEffect(() => {
     if (image) {
@@ -16,7 +16,7 @@ const CardProject = ({ image, desc, title, tags, href }) => {
     <Link href={`/portfolios/${href}`}>
       <a className="home-card-project wrapper" href="/">
         <div className="2xl:w-[60%] xl:w-[100%]  h-50%">
-          <img src={cover} alt="skill" className="cover" />
+          <img src={cover} alt={alternativeText} className="cover" />
         </div>
         <div className="2xl:w-[100%] xl:w-[100%]  h-50% padding rounded-tr-md rounded-br-md ">
           <Heading text={title} as={3} addClass="lg:text-3xl" />

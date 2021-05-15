@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { reqDataHostName, setMonthYear } from '../../../utils';
-import { Heading, Paragraph } from '../../atoms';
+import { setMonthYear } from '../../../utils';
+import { Paragraph } from '../../atoms';
 import TagCapsule from '../../atoms/TagCapsule';
 
 const ContentStudyCase = ({
@@ -15,7 +15,7 @@ const ContentStudyCase = ({
   const [image, setImage] = useState('/gif/loading.gif');
   const [dateProject, setDateProject] = useState();
   useEffect(() => {
-    setImage(reqDataHostName(cover));
+    setImage(cover);
     setDateProject(setMonthYear(year));
   }, []);
   return (

@@ -6,7 +6,7 @@ import TagCapsule from '../TagCapsule';
 import Fade from 'react-reveal/Fade';
 
 const CardPost = ({ title, desc, date, tags, image, href }) => {
-  const [cover, setCover] = useState('/image/blogpost.jpg');
+  const [cover, setCover] = useState('/gif/loading.gif');
   const [dateBlog, setDateBlog] = useState('');
 
   useEffect(() => {

@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from 'react';
-import { reqDataHostName } from '../../../utils';
+import React from 'react';
 import { Divider } from '../../atoms';
 import Educations from './Educations';
 import Footer from './Footer';
@@ -19,11 +18,7 @@ const OnlineResume = ({ data }) => {
       <Divider horizontal />
       <ProfileDesc
         desc={profile[0].desc_profile}
-        profile={
-          profile[0].image_profile
-            ? reqDataHostName(profile[0].image_profile.url)
-            : null
-        }
+        profile={profile[0].image_profile ? profile[0].image_profile.url : null}
       />
       <Divider horizontal />
       <WorkExperience data={experiences} />

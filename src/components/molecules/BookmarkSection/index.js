@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Button, CardPost, HeadingSection, Section } from '../../atoms';
-import { reqDataHostName } from '../../../utils';
 import Skeleton from 'react-loading-skeleton';
 import Fade from 'react-reveal/Fade';
+import { Button, CardPost, HeadingSection, Section } from '../../atoms';
 
 const BookmarkSection = ({ data }) => {
   const [showBlogs, setShowBlogs] = useState(false);
@@ -20,11 +19,7 @@ const BookmarkSection = ({ data }) => {
             <CardPost
               key={blog.id}
               href={blog.url}
-              image={
-                blog.images_cover
-                  ? reqDataHostName(blog.images_cover.url)
-                  : null
-              }
+              image={blog.images_cover ? blog.images_cover.url : null}
               title={blog.title}
               desc={blog.desc}
               tags={blog.tag_blogs}

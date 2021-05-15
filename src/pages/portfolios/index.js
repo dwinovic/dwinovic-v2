@@ -1,5 +1,4 @@
 import Head from 'next/head';
-import { useEffect, useState } from 'react';
 import Skeleton from 'react-loading-skeleton';
 import {
   BodyContent,
@@ -9,7 +8,7 @@ import {
   NavbarTop,
   ProjectSection,
 } from '../../components';
-import { fetchingData, reqDataHostName } from '../../utils';
+import { fetchingData } from '../../utils';
 
 const PortfolioPage = ({ projects, tagProjects, errorMessage }) => {
   return (
@@ -43,11 +42,7 @@ const PortfolioPage = ({ projects, tagProjects, errorMessage }) => {
                     projects.map((project) => (
                       <CardProjectPortfolio
                         key={project.id}
-                        image={
-                          project.cover
-                            ? `${reqDataHostName(project.cover.url)}`
-                            : null
-                        }
+                        image={project.cover ? `${project.cover.url}` : null}
                         desc={project.desc_intro}
                         title={project.title}
                         year={project.projectDate}
