@@ -33,7 +33,7 @@ const Contact = () => {
         const content = res.data;
         setShowLoader(false);
 
-        toast.success('Your message has been delivered', {
+        toast.warning('Your message has been delivered', {
           position: 'top-center',
           autoClose: 5000,
           hideProgressBar: false,
