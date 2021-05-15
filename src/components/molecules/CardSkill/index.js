@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import Zoom from 'react-reveal/Zoom';
 
 function CardSkill({ icon, title, desc }) {
+  console.log(icon);
   const [iconLogo, seticonLogo] = useState('/gif/loading.gif');
 
   useEffect(() => {

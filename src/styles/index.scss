@@ -88,3 +88,21 @@
   }
 }
 // END = CardProjectPortfolio
+
+// START = 404 Page
+.body404 {
+  background-color: #f6f6f5;
+  .page404 {
+    @apply container flex flex-col justify-center mx-auto h-screen w-screen;
+    .buttonWrapper {
+      @apply relative flex mx-auto;
+      .buttonBack {
+        @apply absolute bottom-24 flex items-center justify-center p-2 w-32 bg-blue-300 rounded-lg hover:bg-blue-400;
+        a {
+          @apply font-poppins uppercase font-semibold text-black-700 text-xl hover:text-yellow-500;
+        }
+      }
+    }
+  }
+}
+// END = 404 Page

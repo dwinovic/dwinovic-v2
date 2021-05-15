@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import Skeleton from 'react-loading-skeleton';
 import { CardSkill } from '..';
 import { reqDataHostName } from '../../../utils';
@@ -7,6 +7,24 @@ import Fade from 'react-reveal/Fade';
 import Zoom from 'react-reveal/Zoom';
 
 const index = ({ data }) => {
+  const [showSkills, setShowSkills] = useState(false);
+  // console.log(data.length);
+  useEffect(() => {
+    if (data.length > 0) {
+      setShowSkills(true);
+    }
+  }, []);
+
+  const ItemSkills = () => {
+    return data.map((skill) => (
+      <CardSkill
+        key={skill.id}
+        icon={skill.icon ? reqDataHostName(skill.icon.url) : null}
+        title={skill.title}
+        desc={skill.desc}
+      />
+    ));
+  };
   return (
     <Section id="home-portfolio">
       <Fade top ssrFadeout>
@@ -23,16 +41,7 @@ const index = ({ data }) => {
       </Fade>
       <Zoom>
         <div className="skill-items">
-          {typeof data === 'object' ? (
-            data.map((skill) => (
-              <CardSkill
-                key={skill.id}
-                icon={skill.icon ? reqDataHostName(skill.icon.url) : null}
-                title={skill.title}
-                desc={skill.desc}
-              />
-            ))
-          ) : (
+          {!showSkills && (
             <>
               <Skeleton count={5} />
               <Skeleton count={5} />
@@ -40,7 +49,7 @@ const index = ({ data }) => {
               <Skeleton count={5} />
             </>
           )}
-          {!data && <p>Kosong</p>}
+          {showSkills && <ItemSkills />}
         </div>
       </Zoom>
     </Section>

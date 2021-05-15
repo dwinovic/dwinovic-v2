@@ -5,7 +5,7 @@ export const reqDataHostName = (url) => {
 };
 
 export const fetchingData = async (url) => {
-  const data = await Axios.get(`http://localhost:1337${url}`)
+  const data = await Axios.get(`${process.env.HOSTNAME}${url}`)
     .then((res) => {
       const content = res.data;
       return content;
@@ -19,5 +19,5 @@ export const fetchingData = async (url) => {
 };
 
 export const postData = async (url, post) => {
-  return await Axios.post(`http://localhost:1337${url}`, post);
+  return await Axios.post(`${process.env.HOSTNAME}${url}`, post);
 };
