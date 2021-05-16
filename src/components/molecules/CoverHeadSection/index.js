@@ -2,7 +2,6 @@ import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
 
 const CoverHeadSection = ({ cover, title }) => {
-  console.log(cover);
   const [header, setHeader] = useState('/gif/loading.gif');
 
   useEffect(() => {

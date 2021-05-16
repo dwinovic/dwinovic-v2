@@ -7,7 +7,6 @@ import { HeadingSection, Paragraph, Section } from '../../atoms';
 
 const index = ({ data }) => {
   const [showSkills, setShowSkills] = useState(false);
-  // console.log(data.length);
   useEffect(() => {
     if (data.length > 0) {
       setShowSkills(true);
