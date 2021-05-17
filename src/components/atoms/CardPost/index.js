@@ -16,7 +16,11 @@ const CardPost = ({ title, desc, date, tags, image, href }) => {
 
   return (
     <Fade right cascade>
-      <a target="_blank" href={href} className="card-blog">
+      <a
+        target="_blank"
+        href={href}
+        className=" hover:opacity-90 bg-black-400 w-80 rounded-lg shadow-xl"
+      >
         <img src={cover} className="rounded-tl-lg rounded-tr-lg" />
         <div className="p-4 ">
           <Heading text={title} as={5} color="text-white" />
@@ -26,7 +30,7 @@ const CardPost = ({ title, desc, date, tags, image, href }) => {
                 <TagCapsule key={tag.id} textTag={tag.tag_names} disable />
               ))}
           </div>
-          <Paragraph color="white" addClass={'content-overflow'}>
+          <Paragraph color="white" addClass={'overflow-hidden h-[150px]'}>
             {desc}
           </Paragraph>
           <p className="text-sm font-poppins text-black-200">{dateBlog}</p>

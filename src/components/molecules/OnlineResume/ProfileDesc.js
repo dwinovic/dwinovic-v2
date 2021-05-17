@@ -8,8 +8,12 @@ const ProfileDesc = ({ profile, desc, alt }) => {
     setImage(profile);
   }, []);
   return (
-    <div className="profile-desc space justify-center items-center responsive">
-      <img src={image} className="avatar" alt={alt} />
+    <div className="profile-desc">
+      <img
+        src={image}
+        className="rounded-full 2xl:w-48 2xl:h-48 xl:w-44 xl:h-44 lg:w-40 lg:h-40 md:w-40 md:h-40 sm:w-[50%] sm:h-[50%]  iphone:w-[50%] iphone:h-[50%] android:w-[50%] android:h-[50%] mr-4"
+        alt={alt}
+      />
       <Text>{desc}</Text>
     </div>
   );

@@ -66,7 +66,10 @@ const Contact = () => {
         <title>Dwinovic | Portfolios </title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
-      <div className="body-contact" id="contactpage">
+      <div
+        className="body-contact flex flex-col justify-between h-[100vh]"
+        id="contactpage"
+      >
         <div>
           <NavbarTop dark />
           <div className="main-content"></div>
@@ -77,7 +80,7 @@ const Contact = () => {
             btnSosmed
           />
           <BodyContent>
-            <div className="contact">
+            <div className="contact w-full px-8 flex pb-16">
               <form className="form-contact" onSubmit={handleSubmit(onSubmit)}>
                 <div className="sender-identity space-y space-x">
                   <div className="wrapper-username">

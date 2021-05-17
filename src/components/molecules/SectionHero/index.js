@@ -34,7 +34,7 @@ const index = () => {
       </Fade>
 
       <Fade right>
-        <div className="hero-profile-wrapper">
+        <div className="hero-profile-wrapper md:w-[50%] lg:w-[60%] xl:w-[60%] 2xl:w-[60%]">
           <img src="/image/hero-profile.png" className="avatar" />
         </div>
       </Fade>

@@ -4,7 +4,7 @@
   .skill-item {
     @apply box-border h-auto w-auto p-4  rounded-lg shadow-md;
     .logo-skill {
-      @apply 2xl:w-[40px] xl:w-[40px] lg:w-[40px] md:w-[40px] sm:w-[36px] iphone:w-[32px] android:w-[32px];
+      // @apply 2xl:w-[40px] xl:w-[40px] lg:w-[40px] md:w-[40px] sm:w-[36px] iphone:w-[32px] android:w-[32px];
     }
     .skill-paragraph {
       @apply tracking-wide text-justify;
@@ -41,16 +41,16 @@
     }
   }
   .profile-desc {
-    @apply flex my-6;
+    @apply flex my-6 2xl:flex-row xl:flex-row lg:flex-row md:flex-col sm:flex-col iphone:flex-col android:flex-col  items-center;
     &.space {
       @apply 2xl:space-x-4 xl:space-x-4 lg:space-x-4 md:space-x-4 sm:space-y-4 iphone:space-y-4 android:space-y-4;
     }
     &.responsive {
       @apply 2xl:flex-row xl:flex-row lg:flex-row md:flex-row sm:flex-col iphone:flex-col android:flex-col;
     }
-    .avatar {
-      @apply rounded-full 2xl:w-48 2xl:h-48 xl:w-44 xl:h-44 lg:w-40 lg:h-40 md:w-40 md:h-40 sm:w-[50%] sm:h-[50%]  iphone:w-[50%] iphone:h-[50%] android:w-[50%] android:h-[50%];
-    }
+    // .avatar {
+    //   @apply rounded-full 2xl:w-48 2xl:h-48 xl:w-44 xl:h-44 lg:w-40 lg:h-40 md:w-40 md:h-40 sm:w-[50%] sm:h-[50%]  iphone:w-[50%] iphone:h-[50%] android:w-[50%] android:h-[50%];
+    // }
   }
   .portfolio {
     .skill-items {
@@ -95,12 +95,12 @@
 
 // START = Contact Message Component
 .body-contact {
-  @apply flex flex-col justify-between h-[100vh];
+  // @apply flex flex-col justify-between h-[100vh];
   .main-content {
     @apply h-16 bg-blue-200 2xl:hidden xl:hidden lg:hidden md:block sm:block;
   }
   .contact {
-    @apply w-full px-8 flex pb-16;
+    // @apply w-full px-8 flex pb-16;
     .form-contact {
       @apply flex flex-col space-y-4 w-[80%] mx-auto;
       .sender-identity {

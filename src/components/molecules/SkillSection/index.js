@@ -37,19 +37,17 @@ const index = ({ data }) => {
           who is always eager for knowledge and experience.
         </Paragraph>
       </Fade>
-      <Zoom>
-        <div className="skill-items">
-          {!showSkills && (
-            <>
-              <Skeleton count={5} />
-              <Skeleton count={5} />
-              <Skeleton count={5} />
-              <Skeleton count={5} />
-            </>
-          )}
-          {showSkills && <ItemSkills />}
-        </div>
-      </Zoom>
+      <div className="skill-items">
+        {!showSkills && (
+          <>
+            <Skeleton count={5} />
+            <Skeleton count={5} />
+            <Skeleton count={5} />
+            <Skeleton count={5} />
+          </>
+        )}
+        {showSkills && <ItemSkills />}
+      </div>
     </Section>
   );
 };
