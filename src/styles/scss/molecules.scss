@@ -54,7 +54,12 @@
   }
   .portfolio {
     .skill-items {
-      @apply flex 2xl:space-x-40 xl:space-x-36 lg:space-x-32 md:space-x-24 sm:space-x-16 android:space-x-10 iphone:space-x-8;
+      @apply flex android:flex-col iphone:flex-col md:flex-row lg:flex-row xl:flex-row 2xl:flex-row;
+      .item {
+        &.right {
+          @apply 2xl:mr-80 xl:mr-80 lg:mr-56 md:mr-48 sm:mr-0 iphone:mr-0 android:mr-0;
+        }
+      }
       ul {
         &.list {
           @apply font-lato text-lg text-black-400 text-justify;
@@ -63,7 +68,12 @@
     }
   }
   .interest {
-    @apply flex mt-4 2xl:space-x-40 xl:space-x-36 lg:space-x-32 md:space-x-24 sm:space-x-16 android:space-x-10 iphone:space-x-8;
+    @apply flex android:flex-col iphone:flex-col md:flex-row lg:flex-row xl:flex-row 2xl:flex-row;
+    .item {
+      &.right {
+        @apply 2xl:mr-64 xl:mr-64 lg:mr-56 md:mr-48 sm:mr-0 iphone:mr-0 android:mr-0;
+      }
+    }
     ul {
       &.list {
         @apply font-lato text-lg text-black-400 text-justify;

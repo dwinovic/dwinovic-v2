@@ -4,7 +4,7 @@ import { Heading, Text } from '../../atoms';
 const InterestAndLanguage = () => {
   return (
     <div className="interest">
-      <div>
+      <div className="item right">
         <Heading text="Interest" as={3} />
         <ul className="list">
           <li>Travelling</li>
@@ -14,7 +14,7 @@ const InterestAndLanguage = () => {
           <li>Make more money</li>
         </ul>
       </div>
-      <div>
+      <div className="item ">
         <Heading text="Languages" as={3} />
         <Text>Indonesia</Text>
         <Text>English</Text>

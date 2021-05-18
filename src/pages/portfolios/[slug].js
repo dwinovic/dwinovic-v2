@@ -44,29 +44,22 @@ const StudyCaseProject = ({ data }) => {
 export default StudyCaseProject;
 
 export async function getStaticPaths() {
-  try {
-    const projects = await fetchingData('/projects');
+  const projects = await fetchingData('/projects');
 
-    const paths = projects.map((project) => ({
-      params: { slug: project.slug },
-    }));
+  const paths = projects.map((project) => ({
+    params: { slug: project.slug },
+  }));
 
-    return {
-      paths,
-      fallback: false,
-    };
-  } catch (error) {
-    return error.message;
-  }
+  return {
+    paths,
+    fallback: false,
+  };
 }
 
 export async function getStaticProps({ params }) {
-  try {
-    const { slug } = params;
-    const res = await fetchingData(`/projects?slug=${slug}`);
-    const data = res[0];
-    return { props: { data } };
-  } catch (error) {
-    return error.message;
-  }
+  const { slug } = params;
+  const res = await fetchingData(`/projects?slug=${slug}`);
+  const data = res[0];
+
+  return { props: { data } };
 }

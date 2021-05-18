@@ -6,7 +6,7 @@ const Skills = ({ techSkills, proSkills }) => {
     <div className="portfolio mt-8">
       <Heading text="Skills" as={3} />
       <div className="skill-items">
-        <div>
+        <div className="item right">
           <HeadingSectionResume heading="Technical" />
           <ul className="list">
             {techSkills.map((item) => (
@@ -14,7 +14,7 @@ const Skills = ({ techSkills, proSkills }) => {
             ))}
           </ul>
         </div>
-        <div>
+        <div className="item">
           <HeadingSectionResume heading="Professional" />
           <ul className="list">
             {proSkills.map((item) => (
