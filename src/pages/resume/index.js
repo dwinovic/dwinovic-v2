@@ -24,7 +24,7 @@ const Resume = ({ profile, experiences, projects, techSkills, proSkills }) => {
           heading="Online Resume"
           btnIcon
           btnTitle="Download Resume"
-          href="https://fonts.google.com/"
+          href="https://www.linkedin.com/in/dwinovic/"
         />
         <BodyContent>
           <div className="flex w-full justify-center mb-8">
@@ -39,7 +39,7 @@ const Resume = ({ profile, experiences, projects, techSkills, proSkills }) => {
 
 export default Resume;
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const profile = await fetchingData('/resume-profiles');
   const experiences = await fetchingData('/resume-experiences');
   const projects = await fetchingData('/resume-projects');

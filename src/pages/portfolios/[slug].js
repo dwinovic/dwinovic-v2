@@ -30,7 +30,7 @@ const StudyCaseProject = ({ data }) => {
               client={data.client}
               year={data.projectDate}
               descIntro={data.desc_intro}
-              desc={data.desc}
+              desc={data.desc_content}
               tags={data.tag_projects}
             />
           </div>

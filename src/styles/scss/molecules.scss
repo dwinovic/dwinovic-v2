@@ -68,7 +68,7 @@
     }
   }
   .interest {
-    @apply flex android:flex-col iphone:flex-col md:flex-row lg:flex-row xl:flex-row 2xl:flex-row;
+    @apply flex android:flex-col iphone:flex-col md:flex-row lg:flex-row xl:flex-row 2xl:flex-row mt-3;
     .item {
       &.right {
         @apply 2xl:mr-64 xl:mr-64 lg:mr-56 md:mr-48 sm:mr-0 iphone:mr-0 android:mr-0;

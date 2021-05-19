@@ -68,7 +68,7 @@ const PortfolioPage = ({ projects, tagProjects, errorMessage }) => {
 
 export default PortfolioPage;
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   try {
     const projects = await fetchingData('/projects');
     const tagProjects = await fetchingData('/tag-projects');

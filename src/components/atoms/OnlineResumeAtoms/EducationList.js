@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const EducationList = ({ title, desc }) => {
   return (
-    <div className="mt-4">
+    <div className="">
       <HeadingSectionResume Heading={title} />
       <Text>{desc}</Text>
       {/* Later Fiture */}

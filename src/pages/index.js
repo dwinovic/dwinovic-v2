@@ -70,7 +70,7 @@ export default function Home({ projects, skills, blogs }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const projects = await fetchingData('/projects');
   const skills = await fetchingData('/skills');
   const blogs = await fetchingData('/blogs');

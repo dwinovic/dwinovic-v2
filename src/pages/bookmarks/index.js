@@ -86,7 +86,7 @@ const Bookmarks = ({ blogs, tagBlogs, sortDesc }) => {
 
 export default Bookmarks;
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const blogs = await fetchingData('/blogs');
   const tagBlogs = await fetchingData('/tag-blogs');
   const sortDesc = await fetchingData('/blogs?_sort=createdAt:DESC');
