@@ -39,7 +39,7 @@ const Resume = ({ profile, experiences, projects, techSkills, proSkills }) => {
 
 export default Resume;
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const profile = await fetchingData('/resume-profiles');
   const experiences = await fetchingData('/resume-experiences');
   const projects = await fetchingData('/resume-projects');
