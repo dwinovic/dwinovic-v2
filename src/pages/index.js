@@ -16,9 +16,11 @@ import { fetchingData } from '../utils';
 export default function Home({ projects, skills, blogs }) {
   const [showProjects, setShowProjects] = useState(false);
   useEffect(() => {
-    if (projects.length > 0) {
-      setShowProjects(true);
-    }
+    setTimeout(() => {
+      if (projects.length > 0) {
+        setShowProjects(true);
+      }
+    }, 3000);
   }, []);
 
   const ItemProjects = () => {

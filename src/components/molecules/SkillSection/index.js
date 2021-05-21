@@ -8,9 +8,11 @@ import { HeadingSection, Paragraph, Section } from '../../atoms';
 const index = ({ data }) => {
   const [showSkills, setShowSkills] = useState(false);
   useEffect(() => {
-    if (data.length > 0) {
-      setShowSkills(true);
-    }
+    setTimeout(() => {
+      if (data.length > 0) {
+        setShowSkills(true);
+      }
+    }, 3000);
   }, []);
 
   const ItemSkills = () => {

@@ -6,9 +6,11 @@ import { Button, CardPost, HeadingSection, Section } from '../../atoms';
 const BookmarkSection = ({ data }) => {
   const [showBlogs, setShowBlogs] = useState(false);
   useEffect(() => {
-    if (data.length > 0) {
-      setShowBlogs(true);
-    }
+    setTimeout(() => {
+      if (data.length > 0) {
+        setShowBlogs(true);
+      }
+    }, 3000);
   }, []);
 
   const ItemBlogs = () => {
