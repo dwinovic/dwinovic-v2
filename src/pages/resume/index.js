@@ -5,8 +5,12 @@ import {
   HeaderSection,
   NavbarTop,
   OnlineResume,
+  Heading,
+  Button,
+  HeadingWithIcon,
 } from '../../components';
 import { fetchingData } from '../../utils';
+import styles from './resume.module.scss';
 
 const Resume = ({ profile, experiences, projects, techSkills, proSkills }) => {
   const data = { profile, experiences, projects, techSkills, proSkills };
@@ -27,7 +31,10 @@ const Resume = ({ profile, experiences, projects, techSkills, proSkills }) => {
           href="https://www.linkedin.com/in/dwinovic/"
         />
         <BodyContent>
-          <div className="flex w-full justify-center mb-8">
+          <div className={styles.wrapper}>
+            <div>
+              <HeadingWithIcon>Certificate of Completion</HeadingWithIcon>
+            </div>
             <OnlineResume data={data} />
           </div>
         </BodyContent>

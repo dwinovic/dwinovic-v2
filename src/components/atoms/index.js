@@ -16,6 +16,7 @@ import AnchorText from './AnchorText';
 import NavbarTop from './NavbarTop';
 import TextInlineStyle from './TextInlineStyle';
 export * from './OnlineResumeAtoms';
+import HeadingWithIcon from './HeadingWithIcon';
 
 export {
   Icon,
@@ -35,4 +36,5 @@ export {
   AnchorText,
   NavbarTop,
   TextInlineStyle,
+  HeadingWithIcon,
 };

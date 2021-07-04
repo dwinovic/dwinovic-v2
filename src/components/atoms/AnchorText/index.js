@@ -1,8 +1,9 @@
 import React from 'react';
 import PropsTypes from 'prop-types';
 import Link from 'next/link';
+import Icon from '../Icon';
 
-const AnchorText = ({ children, href, dark }) => {
+const AnchorText = ({ children, href, dark, icon }) => {
   return (
     <Link href={`${href}`}>
       <a
@@ -12,6 +13,7 @@ const AnchorText = ({ children, href, dark }) => {
             : 'text-black-500 hover:text-black-300'
         }`}
       >
+        {icon && <Icon />}
         {children}
       </a>
     </Link>

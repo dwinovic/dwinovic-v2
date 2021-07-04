@@ -15,20 +15,27 @@ import { fetchingData } from '../utils';
 
 export default function Home({ projects, skills, blogs }) {
   const [showProjects, setShowProjects] = useState(false);
+  
+  // console.log(projects);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     if (projects.length > 0) {
+  //       setShowProjects(true);
+  //     }
+  //   }, 3000);
+  // }, []);
   useEffect(() => {
-    setTimeout(() => {
-      if (projects.length > 0) {
-        setShowProjects(true);
-      }
-    }, 3000);
-  }, []);
+    if (projects.length > 0) {
+    setShowProjects(true);
+  }
+  }, [])
 
   const ItemProjects = () => {
     return projects.map((project) => (
       <CardProject
         key={project.id}
         image={project.cover ? `${project.cover.url}` : null}
-        desc={project.desc}
+        desc={project.desc_intro}
         title={project.title}
         tags={project.tag_projects}
         href={project.slug}
@@ -37,7 +44,7 @@ export default function Home({ projects, skills, blogs }) {
     ));
   };
 
-  console.info('Hi!!');
+  console.info('Hi!');
   return (
     <>
       <Head>
@@ -73,11 +80,16 @@ export default function Home({ projects, skills, blogs }) {
 }
 
 export async function getStaticProps() {
-  const projects = await fetchingData('/projects');
-  const skills = await fetchingData('/skills');
-  const blogs = await fetchingData('/blogs');
+  try {
+    const projects = await fetchingData('/projects');
+    const skills = await fetchingData('/skills');
+    const blogs = await fetchingData('/blogs'); 
+    return {
+      props: { projects, skills, blogs },
+      revalidate: 10
+    };
+  } catch (error) {
+    console.log(error);
+  }
 
-  return {
-    props: { projects, skills, blogs },
-  };
 }

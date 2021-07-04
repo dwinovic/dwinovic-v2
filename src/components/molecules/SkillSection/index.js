@@ -6,13 +6,19 @@ import { CardSkill } from '..';
 import { HeadingSection, Paragraph, Section } from '../../atoms';
 
 const index = ({ data }) => {
+  console.log(data);
   const [showSkills, setShowSkills] = useState(false);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     if (data.length > 0) {
+  //       setShowSkills(true);
+  //     }
+  //   }, 3000);
+  // }, []);
   useEffect(() => {
-    setTimeout(() => {
       if (data.length > 0) {
         setShowSkills(true);
       }
-    }, 3000);
   }, []);
 
   const ItemSkills = () => {
